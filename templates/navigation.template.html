@@ -1,5 +1,5 @@
-<nav class="col-md-offset-6 col-lg-6 navbar navbar-default navbar-fixed-top">
-    <div class="container" style="width: 100%;">
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container nav-container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -10,9 +10,9 @@
             <!--<a class="navbar-brand" href="#">Filip Rafajec</a>-->
         </div>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#!/home">Home</a></li>
-                <li><a href="#!/projects">Projects</a></li>
-                <li><a href="#!/contact">Contact</a></li>
+                <li class="active"><a href="home" ng-click="$ctrl.setActive($event)">Home</a></li>
+                <li><a href="projects" ng-click="$ctrl.setActive($event)">Projects</a></li>
+                <li><a href="contact" ng-click="$ctrl.setActive($event)">Contact</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>

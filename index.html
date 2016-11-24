@@ -2,7 +2,11 @@
 <html lang="en" ng-app="personal">
 <head>
     <meta charset="utf-8">
+    <!--<base href="/">-->
     <title>Home - Filip Rafajec</title>
+
+    <!--[if IE]><link rel="shortcut icon" href="favicon.ico"><![endif]-->
+    <link rel="icon" href="favicon.png">
 
     <link rel="stylesheet" href="libs/libs.min.css"/>
     <link rel="stylesheet" href="app.min.css"/>
@@ -12,13 +16,14 @@
     <script src="app.min.js"></script>
 
 </head>
-<body >
+<body>
 
     <navigation></navigation>
 
     <div class="view-container">
-        <div ng-view class="view-frame"></div>
+        <div ng-view></div>
     </div>
 
+    <footer></footer>
+
 </body>
-</html>
