@@ -1,0 +1,30 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jquery": true,
+    "jest": true
+  },
+  "globals": {
+    "document": true,
+    "window": true
+  },
+  "rules": {
+    "no-use-before-define": 0,
+    "quotes": "off",
+    "no-param-reassign": "off",
+    "arrow-parens": "off",
+    "space-before-function-paren": "off",
+    "comma-dangle": "off",
+    "no-unused-vars": "warn",
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "warn",
+      {
+        "aspects": ["invalidHref"]
+      }
+    ]
+  }
+}

@@ -9,18 +9,6 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.py]
-indent_style = space
-indent_size = 4
-
-[*.rb]
-indent_style = space
-indent_size = 2
-
-[*.coffee]
-indent_style = space
-indent_size = 4
-
 [*.{js,jsx,json}]
 indent_style = space
 indent_size = 2
@@ -28,15 +16,3 @@ indent_size = 2
 [*.{css,scss,scssm}]
 indent_style = space
 indent_size = 2
-
-[*.{html,djhtml}]
-indent_style = space
-indent_size = 2
-
-[*.as]
-indent_style = space
-indent_size = 4
-
-[*.{xml,mxml}]
-indent_style = space
-indent_size = 4
