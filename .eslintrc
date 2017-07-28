@@ -13,7 +13,6 @@
   },
   "rules": {
     "no-use-before-define": 0,
-    "quotes": "off",
     "no-param-reassign": "off",
     "arrow-parens": "off",
     "space-before-function-paren": "off",

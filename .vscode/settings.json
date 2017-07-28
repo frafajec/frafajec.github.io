@@ -1,8 +1,6 @@
-// Place your settings in this file to overwrite default and user settings.
 {
   "prettier.printWidth": 120,
   "prettier.trailingComma": "es5",
-  "prettier.cssEnable": [
-    "scss"
-  ]
+  "prettier.singleQuote": true,
+  "prettier.cssEnable": ["scss"]
 }
