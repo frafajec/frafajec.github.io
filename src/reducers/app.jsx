@@ -1,0 +1,21 @@
+import actionTypes from '../constants/actionTypes';
+
+const defaultState = {
+  loaded: false,
+};
+
+function setLoaded(state, action) {
+  return {
+    ...state,
+    ...action,
+  };
+}
+
+const handlers = {
+  [actionTypes.SET_LOADED]: setLoaded,
+};
+
+export default function app(state = defaultState, action) {
+  const handler = handlers[action.type];
+  return handler ? handler(state, action) : state;
+}
