@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
+import { Route, Redirect, withRouter } from 'react-router-dom';
 
 import actions from '../actions';
+import routes from './routes';
 
-import Homepage from './Homepage';
-import Projects from './Projects';
-
-import './App.scssm';
+import Homepage from '../components/Homepage';
+import Projects from '../components/Projects';
 
 // ------------------------------------------------------------------------------------------------
 function mapStateToProps(state) {
@@ -31,14 +30,16 @@ const AppRouterProps = {
 
 class AppRouter extends React.Component {
   render() {
+    // TODO redirect kills sub routes!
     return (
-      <div styleName="App-layout">
-        <Route path="/" exact component={Homepage} />
-        <Route path="/projects" component={Projects} />
+      <div>
+        <Route path={routes.HOME} exact component={Homepage} />
+        <Route path={routes.PROJECTS} component={Projects} />
+        {/* <Redirect to={routes.HOME} /> */}
       </div>
     );
   }
 }
 AppRouter.propTypes = AppRouterProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppRouter);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AppRouter));

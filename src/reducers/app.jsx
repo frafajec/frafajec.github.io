@@ -2,7 +2,7 @@ import actionTypes from '../constants/actionTypes';
 
 const defaultState = {
   loaded: false,
-  location: '/',
+  location: null,
 };
 
 function setLoaded(state, action) {

@@ -2,9 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import actions from '../../actions';
-import logo from '../../assets/logo.svg';
+
+import Nav from '../Nav';
+import Footer from '../Footer';
 
 import './Homepage.scssm';
 
@@ -24,21 +27,15 @@ const HomepageProps = {};
 
 class Homepage extends React.Component {
   render() {
-    console.log(this.props);
-
     return (
-      <div styleName="App">
-        <div styleName="App-header">
-          <img src={logo} styleName="App-logo" alt="logo" />
-          <h2 styleName="bla">Welcome to React</h2>
-        </div>
-        <p styleName="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div styleName="Home">
+        <Nav />
+        <div styleName="Home-container">Homepage!</div>
+        <Footer />
       </div>
     );
   }
 }
 Homepage.propTypes = HomepageProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Homepage);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Homepage));

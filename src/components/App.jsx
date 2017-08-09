@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import actions from '../actions';
 
-import AppRouter from './AppRouter';
+import AppRouter from '../router';
 
 import './App.scssm';
 
@@ -43,4 +44,4 @@ class App extends React.Component {
 }
 App.propTypes = AppProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
