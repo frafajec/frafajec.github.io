@@ -2,6 +2,7 @@ import actionTypes from '../constants/actionTypes';
 
 const defaultState = {
   loaded: false,
+  location: '/',
 };
 
 function setLoaded(state, action) {
@@ -11,8 +12,16 @@ function setLoaded(state, action) {
   };
 }
 
+function updateLocation(state, action) {
+  return {
+    ...state,
+    ...action,
+  };
+}
+
 const handlers = {
   [actionTypes.SET_LOADED]: setLoaded,
+  [actionTypes.UPDATE_LOCATION]: updateLocation,
 };
 
 export default function app(state = defaultState, action) {

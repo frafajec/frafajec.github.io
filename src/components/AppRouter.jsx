@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 
 import actions from '../actions';
 
-import AppRouter from './AppRouter';
+import Homepage from './Homepage';
+import Projects from './Projects';
 
 import './App.scssm';
 
@@ -13,7 +15,6 @@ import './App.scssm';
 function mapStateToProps(state) {
   return {
     loaded: state.app.loaded,
-    location: state.app.location,
   };
 }
 
@@ -24,23 +25,20 @@ function mapDispatchToProps(dispatch) {
 }
 
 // ------------------------------------------------------------------------------------------------
-const AppProps = {
+const AppRouterProps = {
   setAppLoaded: PropTypes.func.isRequired,
 };
 
-class App extends React.Component {
-  componentDidMount() {
-    this.props.setAppLoaded();
-  }
-
+class AppRouter extends React.Component {
   render() {
     return (
-      <div styleName="App">
-        <AppRouter />
+      <div styleName="App-layout">
+        <Route path="/" exact component={Homepage} />
+        <Route path="/projects" component={Projects} />
       </div>
     );
   }
 }
-App.propTypes = AppProps;
+AppRouter.propTypes = AppRouterProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(AppRouter);

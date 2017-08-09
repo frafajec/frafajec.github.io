@@ -7,6 +7,14 @@ function setAppLoaded() {
   };
 }
 
+function updateLocation(location) {
+  return {
+    type: actionTypes.UPDATE_LOCATION,
+    location,
+  };
+}
+
 export default {
   setAppLoaded,
+  updateLocation,
 };
