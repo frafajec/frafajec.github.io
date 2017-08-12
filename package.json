@@ -16,9 +16,6 @@
     "redux-localstorage": "^0.4.1",
     "redux-saga": "^0.15.6"
   },
-  "oldDepenencies": {
-    "whatwg-fetch": "2.0.3"
-  },
   "devDependencies": {
     "autoprefixer": "7.1.1",
     "babel-core": "6.25.0",

@@ -1,4 +1,5 @@
-import { createStore, applyMiddleware } from 'redux';
+import { compose, createStore, applyMiddleware } from 'redux';
+import persistState from 'redux-localstorage';
 import { keys } from 'lodash';
 
 import reducers from '../reducers';
@@ -8,7 +9,6 @@ import calcInitialState from './initialState';
 
 export default function newStore(overrideState = {}) {
   const defaultState = reducers(undefined, { type: 'init' });
-
   const initialState = { ...calcInitialState(), ...overrideState };
 
   // override individual properties in each section of the state
@@ -17,6 +17,17 @@ export default function newStore(overrideState = {}) {
     return defaultState;
   });
 
+  // redux enhancer used for state saving
+  const reduxStorageConfig = {
+    key: 'appState',
+  };
+
+  const enhancer = compose(
+    /* [middlewares] */
+    // persistState(/*paths, config*/)
+    persistState('local', reduxStorageConfig) // local state currently doesn't exist!
+  );
+
   // return createStore(reducers, defaultState, applyMiddleware(analyticsMiddleware));
-  return createStore(reducers, defaultState);
+  return createStore(reducers, defaultState, enhancer);
 }
