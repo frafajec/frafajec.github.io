@@ -7,6 +7,12 @@ function setAppLoaded() {
   };
 }
 
+function onWindowResize() {
+  return {
+    type: actionTypes.WINDOW_RESIZE,
+  };
+}
+
 function updateLocation(location) {
   return {
     type: actionTypes.UPDATE_LOCATION,
@@ -17,4 +23,5 @@ function updateLocation(location) {
 export default {
   setAppLoaded,
   updateLocation,
+  onWindowResize,
 };

@@ -6,15 +6,16 @@ import { withRouter } from 'react-router-dom';
 
 import actions from '../../actions';
 
-import Nav from '../Nav';
-import Footer from '../Footer';
+import Nav from '../../components/Nav';
+import Footer from '../../components/Footer';
+import Jumbotron from '../../components/Jumbotron';
 
 import './Homepage.scssm';
 
 // ------------------------------------------------------------------------------------------------
-function mapStateToProps(state, props) {
+function mapStateToProps(state) {
   return {
-    path: props.match.path,
+    browser: state.app.browser,
   };
 }
 
@@ -23,12 +24,15 @@ function mapDispatchToProps(dispatch) {
 }
 
 // ------------------------------------------------------------------------------------------------
-const HomepageProps = {};
+const HomepageProps = {
+  browser: PropTypes.object.isRequired,
+};
 
 class Homepage extends React.Component {
   render() {
     return (
       <div styleName="Home">
+        <Jumbotron height={this.props.browser.height} />
         <Nav />
         <div styleName="Home-container">Homepage!</div>
         <Footer />

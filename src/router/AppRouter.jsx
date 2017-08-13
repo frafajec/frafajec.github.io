@@ -7,26 +7,11 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 import actions from '../actions';
 import routes from './routes';
 
-import Homepage from '../components/Homepage';
-import Projects from '../components/Projects';
+import Homepage from '../containers/Homepage';
+import Projects from '../containers/Projects';
 
 // ------------------------------------------------------------------------------------------------
-function mapStateToProps(state) {
-  return {
-    loaded: state.app.loaded,
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    setAppLoaded: () => dispatch(actions.setAppLoaded()),
-  };
-}
-
-// ------------------------------------------------------------------------------------------------
-const AppRouterProps = {
-  setAppLoaded: PropTypes.func.isRequired,
-};
+const AppRouterProps = {};
 
 class AppRouter extends React.Component {
   render() {
@@ -42,4 +27,4 @@ class AppRouter extends React.Component {
 }
 AppRouter.propTypes = AppRouterProps;
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AppRouter));
+export default AppRouter;
