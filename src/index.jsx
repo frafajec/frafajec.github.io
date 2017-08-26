@@ -8,7 +8,7 @@ import newStore from './store';
 
 import App from './containers/App';
 
-import './index.scss';
+import './styles/index.scss';
 
 const store = newStore();
 

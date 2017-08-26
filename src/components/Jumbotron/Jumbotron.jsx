@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Ficon from '../Ficon';
+
 import './Jumbotron.scssm';
 
 // ------------------------------------------------------------------------------------------------
@@ -13,6 +15,10 @@ export default class Jumbotron extends React.Component {
     const style = {
       height: this.props.height,
     };
+    const iconStyle = {
+      paddingTop: 20,
+      cursor: 'pointer',
+    };
 
     return (
       <div styleName="Jumbotron" style={style}>
@@ -22,7 +28,7 @@ export default class Jumbotron extends React.Component {
         </div>
         <div styleName="overlay-container" />
         <a styleName="scroll-down">
-          <span className="glyphicon glyphicon-chevron-down" />
+          <Ficon name="chevron-down" width={50} height={40} style={iconStyle} />
         </a>
       </div>
     );

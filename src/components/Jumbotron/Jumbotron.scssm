@@ -53,5 +53,8 @@
     background-color: #222222;
     text-align: center;
     z-index: 6;
+
+    font-size: 30px;
+    color: white;
   }
 }
