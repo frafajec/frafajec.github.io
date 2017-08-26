@@ -1,7 +1,13 @@
-@import "./font-awesome.min.css";
+@import "./font-awesome.min.css"; // http://fontawesome.io/
+@import "./grid.min.css"; // https://github.com/Hilzu/bootstrap-grid
+
+@import "./variables.scss";
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+
+  background-color: $paper;
+  font-family: $webFont;
 }

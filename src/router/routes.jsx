@@ -1,5 +1,6 @@
 export default {
   HOME: '/',
-  PROJECTS: '/projects',
+  ABOUT: '/about',
   PROJECT_ID: '/projects/:projectId',
+  PROJECTS: '/projects',
 };

@@ -30,8 +30,6 @@
 .Home {
   display: flex;
   flex-flow: column;
-
-  background-color: #9a9aff;
 }
 
 .Home-container {

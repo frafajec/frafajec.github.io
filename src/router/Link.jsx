@@ -30,7 +30,7 @@ class Link extends React.Component {
     const { path, label, navigateTo } = this.props;
 
     return (
-      <NavLink to={path} activeClassName="selected" onClick={navigateTo}>
+      <NavLink to={path} activeClassName="active" onClick={navigateTo}>
         {label}
       </NavLink>
     );

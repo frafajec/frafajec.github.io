@@ -32,7 +32,7 @@ class Homepage extends React.Component {
   render() {
     return (
       <div styleName="Home">
-        <Jumbotron height={this.props.browser.height} />
+        <Jumbotron height={this.props.browser.height} mainText={'Filip Rafajec'} subText={'Web developer'} />
         <Nav />
         <div styleName="Home-container">Homepage!</div>
         <Footer />

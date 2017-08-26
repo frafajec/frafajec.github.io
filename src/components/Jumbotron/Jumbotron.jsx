@@ -8,6 +8,13 @@ import './Jumbotron.scssm';
 // ------------------------------------------------------------------------------------------------
 const JumbotronProps = {
   height: PropTypes.number.isRequired,
+  mainText: PropTypes.string,
+  subText: PropTypes.string,
+};
+
+const JumbotronDefaultProps = {
+  mainText: '',
+  subText: '',
 };
 
 export default class Jumbotron extends React.Component {
@@ -23,8 +30,12 @@ export default class Jumbotron extends React.Component {
     return (
       <div styleName="Jumbotron" style={style}>
         <div styleName="text-container">
-          <h1>Filip Rafajec</h1>
-          <p>Web developer</p>
+          <h1>
+            {this.props.mainText}
+          </h1>
+          <p>
+            {this.props.subText}
+          </p>
         </div>
         <div styleName="overlay-container" />
         <a styleName="scroll-down">
@@ -35,3 +46,4 @@ export default class Jumbotron extends React.Component {
   }
 }
 Jumbotron.propTypes = JumbotronProps;
+Jumbotron.defaultProps = JumbotronDefaultProps;
