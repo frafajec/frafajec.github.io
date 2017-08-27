@@ -2,7 +2,6 @@
 
 .Footer {
   border-top: 1px solid #c4c4c4;
-  padding: 20px 0;
   font-size: 12px;
   line-height: 16px;
   color: #8c8c8c;
@@ -151,6 +150,8 @@
   }
 
   .info {
+    padding-bottom: 20px;
+
     .copyright {
       display: block;
       overflow: hidden;

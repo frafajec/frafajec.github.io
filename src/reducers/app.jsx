@@ -27,6 +27,7 @@ function onWindowResize(state) {
 }
 
 function updateLocation(state, action) {
+  // TODO set document.title!
   return {
     ...state,
     ...action,
