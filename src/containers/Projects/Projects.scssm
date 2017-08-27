@@ -1,7 +1,3 @@
-// .Projects-layout {
-//   display: block;
-// }
-
 .Projects {
   display: flex;
   flex-flow: column;
