@@ -34,7 +34,9 @@ class Homepage extends React.Component {
       <div styleName="Home">
         <Jumbotron height={this.props.browser.height} mainText={'Filip Rafajec'} subText={'Web developer'} />
         <Nav />
-        <div styleName="Home-container">Homepage!</div>
+        <div styleName="Home-container" className="container">
+          Homepage!
+        </div>
         <Footer />
       </div>
     );

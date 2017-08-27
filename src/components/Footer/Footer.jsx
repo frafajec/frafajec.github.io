@@ -6,35 +6,55 @@ import { withRouter } from 'react-router-dom';
 
 import actions from '../../actions';
 import { Link, routes } from '../../router';
+import urls from '../../constants/urls';
+
+import Ficon from '../Ficon';
 
 import './Footer.scssm';
 
 // ------------------------------------------------------------------------------------------------
-function mapStateToProps(state) {
-  return {};
-}
+const FooterSocialProps = {};
 
-function mapDispatchToProps(dispatch) {
-  return {};
+function FooterSocial() {
+  return (
+    <div styleName="content">
+      <ul styleName="social-networks">
+        <li>
+          <a href={urls.LINKEDIN} target="_blank">
+            <Ficon name="linkedin" width={40} height={40} />
+          </a>
+        </li>
+        <li>
+          <a href={urls.GITHUB} target="_blank">
+            <Ficon name="github" width={40} height={40} />
+          </a>
+        </li>
+        <li>
+          <a href={urls.MEDIUM} target="_blank">
+            <Ficon name="medium" width={40} height={40} />
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
 }
+FooterSocial.propTypes = FooterSocialProps;
 
 // ------------------------------------------------------------------------------------------------
-const FooterProps = {};
+const FooterProps = {
+  social: PropTypes.bool,
+};
+const FooterDefaultProps = {
+  social: true,
+};
 
 class Footer extends React.Component {
   render() {
+    const { social } = this.props;
+
     return (
       <div styleName="Footer">
-        <div styleName="content">
-          <ul styleName="social-networks">
-            <li>
-              <a href="#">Icon</a>
-            </li>
-            <li>
-              <a href="#">222</a>
-            </li>
-          </ul>
-        </div>
+        {social ? <FooterSocial /> : null}
         <div className="container">
           <div styleName="navigation">
             <ul styleName="links">
@@ -81,5 +101,6 @@ class Footer extends React.Component {
   }
 }
 Footer.propTypes = FooterProps;
+Footer.defaultProps = FooterDefaultProps;
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Footer));
+export default withRouter(Footer);
