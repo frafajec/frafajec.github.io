@@ -1,14 +1,8 @@
-.Projects-layout {
-  display: block;
-}
+// .Projects-layout {
+//   display: block;
+// }
 
 .Projects {
-  width: 200px;
-  height: 300px;
-
-  background-color: green;
-}
-
-.Projects-container {
-
+  display: flex;
+  flex-flow: column;
 }

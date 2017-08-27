@@ -1,11 +1,9 @@
 .Jumbotron {
-  position: relative;
-  margin-bottom: 0px;
-  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .text-container {
-    position: relative;
-    top: 28%;
     z-index: 4;
     text-align: center;
 
@@ -13,20 +11,14 @@
       padding-bottom: 20px;
       border-bottom: 1px solid #FFFFFF;
       border-bottom-color: rgba(255,255,255,0.35);
-      display: inline-block;
-      text-align: center;
       color: #FFFFFF;
-      font-weight: 700;
       margin-bottom: 10px;
       font-size: 63px;
     }
 
     p {
       font-size: 28px;
-      text-align: center;
       color: #FFFFFF;
-      margin-bottom: 15px;
-      font-weight: 200;
       margin: 0 0 10px;
     }
   }
@@ -38,15 +30,12 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    /* opacity: 0.75; */
-    filter: alpha(opacity=75);
     z-index: 2;
   }
 
   .scroll-down {
     height: 80px;
     width: 110px;
-    display: block;
     position: absolute;
     bottom: 0px;
     right: 5%;
@@ -56,5 +45,8 @@
 
     font-size: 30px;
     color: white;
+
+    border: 0;
+    padding: 0;
   }
 }

@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 
 import actions from '../../actions';
 
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 import Jumbotron from '../../components/Jumbotron';
+import { Abilities, Contact, Experiences, Profile, Projects } from '../../components/Homepage';
 
 import './Homepage.scssm';
 
@@ -30,12 +32,26 @@ const HomepageProps = {
 
 class Homepage extends React.Component {
   render() {
+    const scrollToHome = () => {
+      scroller.scrollTo('homeContainer', { smooth: true, duration: 800 });
+    };
+    const jumbotronProps = {
+      height: this.props.browser.height,
+      mainText: 'Filip Rafajec',
+      scrollDown: scrollToHome,
+      subText: 'Web developer',
+    };
+
     return (
       <div styleName="Home">
-        <Jumbotron height={this.props.browser.height} mainText={'Filip Rafajec'} subText={'Web developer'} />
-        <Nav />
-        <div styleName="Home-container" className="container">
-          Homepage!
+        {/* <Nav /> */}
+        <Jumbotron {...jumbotronProps} />
+        <div id="homeContainer" className="container">
+          <Profile />
+          <Experiences />
+          <Abilities />
+          <Projects />
+          <Contact />
         </div>
         <Footer />
       </div>

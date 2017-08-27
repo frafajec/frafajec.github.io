@@ -10,11 +10,13 @@ const JumbotronProps = {
   height: PropTypes.number.isRequired,
   mainText: PropTypes.string,
   subText: PropTypes.string,
+  scrollDown: PropTypes.func,
 };
 
 const JumbotronDefaultProps = {
   mainText: '',
   subText: '',
+  scrollDown: null,
 };
 
 export default class Jumbotron extends React.Component {
@@ -23,7 +25,7 @@ export default class Jumbotron extends React.Component {
       height: this.props.height,
     };
     const iconStyle = {
-      paddingTop: 20,
+      paddingTop: 15,
       cursor: 'pointer',
     };
 
@@ -38,9 +40,9 @@ export default class Jumbotron extends React.Component {
           </p>
         </div>
         <div styleName="overlay-container" />
-        <a styleName="scroll-down">
+        <button styleName="scroll-down" onClick={this.props.scrollDown}>
           <Ficon name="chevron-down" width={50} height={40} style={iconStyle} />
-        </a>
+        </button>
       </div>
     );
   }

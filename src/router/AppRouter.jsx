@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router-dom';
 
-import actions from '../actions';
 import routes from './routes';
 
 import Homepage from '../containers/Homepage';
 import Projects from '../containers/Projects';
+import Contact from '../containers/Contact';
 
 // ------------------------------------------------------------------------------------------------
 const AppRouterProps = {};
@@ -20,6 +20,7 @@ class AppRouter extends React.Component {
       <div>
         <Route path={routes.HOME} exact component={Homepage} />
         <Route path={routes.PROJECTS} component={Projects} />
+        <Route path={routes.CONTACT} component={Contact} />
         {/* <Redirect to={routes.HOME} /> */}
       </div>
     );

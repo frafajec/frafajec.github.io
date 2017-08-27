@@ -9,19 +9,11 @@ import actions from '../../actions';
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 
-import './Projects.scssm';
+import './Contact.scssm';
 
 // ------------------------------------------------------------------------------------------------
 function mapStateToProps(state, ownProps) {
-  let projectId = state.projects.projectId;
-  if (!projectId) {
-    // TODO in init of store!
-    projectId = ownProps.match.params.projectId;
-  }
-
-  return {
-    projectId,
-  };
+  return {};
 }
 
 function mapDispatchToProps(dispatch) {
@@ -29,31 +21,25 @@ function mapDispatchToProps(dispatch) {
 }
 
 // ------------------------------------------------------------------------------------------------
-const ProjectsProps = {
+const ContactProps = {
   projectId: PropTypes.string,
 };
-const ProjectsDefaultProps = {
+const ContactDefaultProps = {
   projectId: null,
 };
 
-class Projects extends React.Component {
+class Contact extends React.Component {
   render() {
-    const notif = (
-      <div>
-        {this.props.projectId}
-      </div>
-    );
     return (
-      <div styleName="Projects">
+      <div styleName="Contact">
         {/* <Nav /> */}
-        <div>Projects!</div>
-        {!this.props.projectId ? null : notif}
+        <div>Contact!</div>
         <Footer />
       </div>
     );
   }
 }
-Projects.propTypes = ProjectsProps;
-Projects.defaultProps = ProjectsDefaultProps;
+Contact.propTypes = ContactProps;
+Contact.defaultProps = ContactDefaultProps;
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Projects));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Contact));
