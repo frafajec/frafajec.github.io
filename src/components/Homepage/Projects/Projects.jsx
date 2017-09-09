@@ -7,6 +7,15 @@ import './Projects.scssm';
 const ProjectsProps = {};
 
 export default function Projects() {
-  return <div styleName="Projects">Projects</div>;
+  return (
+    <div styleName="Projects">
+      <h2>Projects</h2>
+      <p>Hello there!</p>
+
+      <hr />
+
+      <div styleName="content" />
+    </div>
+  );
 }
 Projects.propTypes = ProjectsProps;

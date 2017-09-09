@@ -1,17 +1,17 @@
 @import "../../styles/variables.scss";
 
 .Footer {
-  border-top: 1px solid #c4c4c4;
+  border-top: 1px solid $borderLight;
   font-size: 12px;
   line-height: 16px;
-  color: #8c8c8c;
+  color: $textFaded;
   font-family: $webFont;
   letter-spacing: 1px;
 
   .content {
     text-align: center;
     padding: 30px 0 50px;
-    border-bottom: 1px solid #c4c4c4;
+    border-bottom: 1px solid $borderLight;
 
     .social-networks {
       font-size: 0;
@@ -35,19 +35,19 @@
           font-size: 25px;
 
           overflow: hidden;
-          border: 1px solid #aeaeae;
+          border: 1px solid $borderHeaven;
           width: 73px;
           height: 73px;
           position: relative;
           border-radius: 50%;
 
-          color: #434343;
+          color: $textColor;
           text-decoration: none;
           background: transparent;
 
           &:hover {
-            background-color: #f2f2f2;
-            border-color: #f2f2f2;
+            background-color: $lowWhite;
+            border-color: $lowWhite;
           }
 
           i {
@@ -63,7 +63,7 @@
     padding: 20px 0;
     font-size: 12px;
     line-height: 16px;
-    color: #8c8c8c;
+    color: $textFaded;
     letter-spacing: 1px;
 
     .links {
@@ -84,7 +84,7 @@
           position: absolute;
           top: -1px;
           left: -27px;
-          color: #a7a7a7;
+          color: $overcast;
           width: 1px;
           height: 12px;
           font-size: 12px;
@@ -96,10 +96,10 @@
 
         a {
           text-decoration: none;
-          color: #4b4b4b;
+          color: $textColorLight;
 
           &:hover {
-            color: #a7a7a7;
+            color: $overcast;
           }
         }
       }
@@ -122,7 +122,7 @@
           position: absolute;
           top: -1px;
           left: -23px;
-          color: #a7a7a7;
+          color: $textColorHeaven;
           width: 1px;
           height: 12px;
           font-size: 12px;
@@ -138,10 +138,10 @@
 
         a {
           text-decoration: none;
-          color: #4b4b4b;
+          color: $textColorLight;
 
           &:hover {
-            color: #a7a7a7;
+            color: $textColorHeaven;
           }
         }
       }
@@ -175,14 +175,14 @@
           a {
             display: inline-block;
             vertical-align: top;
-            color: #4b4b4b;
+            color: $textColorLight;
             padding: 0 0 1px;
             position: relative;
             text-decoration: none;
 
             &:after {
               content: "";
-              background: #a7a7a7;
+              background: $textColorHeaven;
               height: 1px;
               position: absolute;
               bottom: 0;
@@ -191,7 +191,7 @@
             }
 
             &:hover:after {
-              background: #4b4b4b;
+              background: $textColorLight;
             }
           }
         }

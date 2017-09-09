@@ -7,6 +7,15 @@ import './Contact.scssm';
 const ContactProps = {};
 
 export default function Contact() {
-  return <div styleName="Contact">Contact</div>;
+  return (
+    <div styleName="Contact">
+      <h2>Contact</h2>
+      <p>Hello there!</p>
+
+      <hr />
+
+      <div styleName="content" />
+    </div>
+  );
 }
 Contact.propTypes = ContactProps;

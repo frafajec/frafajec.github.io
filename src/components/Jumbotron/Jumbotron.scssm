@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .Jumbotron {
   display: flex;
   align-items: center;
@@ -9,22 +11,22 @@
 
     h1 {
       padding-bottom: 20px;
-      border-bottom: 1px solid #FFFFFF;
+      border-bottom: 1px solid $main;
       border-bottom-color: rgba(255,255,255,0.35);
-      color: #FFFFFF;
+      color: $main;
       margin-bottom: 10px;
       font-size: 63px;
     }
 
     p {
       font-size: 28px;
-      color: #FFFFFF;
+      color: $main;
       margin: 0 0 10px;
     }
   }
 
   .overlay-container {
-    background-color: #22A39F;
+    background-color: $lavendar;
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -34,7 +36,6 @@
     overflow: hidden;
 
     video {
-      // background: #000 url("../../assets/video/LoveCoding/Snapshots/Love-Coding.jpg") no-repeat fixed center;
       height: auto;
       width: auto;
     }
@@ -46,12 +47,12 @@
     position: absolute;
     bottom: 0px;
     right: 5%;
-    background-color: white;
+    background-color: $main;
     text-align: center;
     z-index: 6;
 
     font-size: 30px;
-    color: #222;
+    color: $darkGray;
 
     border: 0;
     padding: 0;
