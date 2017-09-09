@@ -23,8 +23,12 @@
     "jsx-a11y/anchor-is-valid": [
       "warn",
       {
-        "aspects": ["invalidHref"]
+        "aspects": [
+          "invalidHref"
+        ]
       }
-    ]
+    ],
+    "jsx-a11y/media-has-caption": "off",
+    "max-len": "off"
   }
 }

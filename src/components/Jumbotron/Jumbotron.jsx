@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import Ficon from '../Ficon';
 
+import video from '../../assets/video';
+
 import './Jumbotron.scssm';
 
 // ------------------------------------------------------------------------------------------------
@@ -39,7 +41,15 @@ export default class Jumbotron extends React.Component {
             {this.props.subText}
           </p>
         </div>
-        <div styleName="overlay-container" />
+
+        <div styleName="overlay-container">
+          <video loop muted autoPlay poster={video.videoPreview}>
+            <source src={video.videoWebm} type="video/webm" />
+            <source src={video.videoMp4} type="video/mp4" />
+            <source src={video.videoOgv} type="video/ogv" />
+          </video>
+        </div>
+
         <button styleName="scroll-down" onClick={this.props.scrollDown}>
           <Ficon name="chevron-down" width={50} height={40} style={iconStyle} />
         </button>

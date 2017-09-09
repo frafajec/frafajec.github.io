@@ -31,6 +31,13 @@
     left: 0px;
     right: 0px;
     z-index: 2;
+    overflow: hidden;
+
+    video {
+      // background: #000 url("../../assets/video/LoveCoding/Snapshots/Love-Coding.jpg") no-repeat fixed center;
+      height: auto;
+      width: auto;
+    }
   }
 
   .scroll-down {
@@ -39,14 +46,17 @@
     position: absolute;
     bottom: 0px;
     right: 5%;
-    background-color: #222222;
+    background-color: white;
     text-align: center;
     z-index: 6;
 
     font-size: 30px;
-    color: white;
+    color: #222;
 
     border: 0;
     padding: 0;
+
+    outline: none;
+    cursor: pointer;
   }
 }
