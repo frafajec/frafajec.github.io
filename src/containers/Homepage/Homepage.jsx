@@ -46,7 +46,7 @@ class Homepage extends React.Component {
       <div styleName="Home">
         {/* <Nav /> */}
         <Jumbotron {...jumbotronProps} />
-        <div id="homeContainer" className="container">
+        <div id="homeContainer">
           <Profile />
           <Experiences />
           <Abilities />

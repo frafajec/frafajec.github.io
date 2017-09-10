@@ -2,6 +2,7 @@
 
 .Projects {
   padding: 40px 180px;
+  background-color: $paperDark;
 
   h2 {
     font-size: 54px;

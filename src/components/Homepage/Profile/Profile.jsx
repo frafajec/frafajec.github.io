@@ -9,7 +9,6 @@ import './Profile.scssm';
 const ProfileProps = {};
 
 export default function Profile() {
-  console.log(PersonalImage);
   return (
     <div styleName="Profile">
       <h2>Profile</h2>
