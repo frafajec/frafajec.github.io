@@ -30,6 +30,7 @@
       }
     ],
     "jsx-a11y/media-has-caption": "off",
-    "max-len": "off"
+    "max-len": "off",
+    "react/jsx-indent": "off"
   }
 }

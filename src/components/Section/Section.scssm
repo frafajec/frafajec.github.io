@@ -1,0 +1,32 @@
+.Section {
+  padding-top: 20px;
+  margin-top: 40px;
+  border-top: 1px solid rgba(114, 120, 120, 0.2);
+
+  &:first-of-type {
+    padding-top: 0;
+    border: 0;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .section-content {
+
+  }
+}
+
+.SectionColumn {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}

@@ -30,5 +30,29 @@
   }
 
   .content {
+    .section-column {
+      position: relative;
+      display: inline-block;
+      width: 50%;
+    }
+  }
+}
+
+.StarContainer {
+  .text {
+    display: inline-block;
+    width: 60%;
+  }
+
+  .stars {
+    display: inline-block;
+  }
+}
+
+.StarsList {
+  .star {
+    display: inline-block;
+    color: #22a39f;
+    font-size: 13px;
   }
 }
