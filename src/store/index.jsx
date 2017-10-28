@@ -1,4 +1,4 @@
-import { compose, createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 
 import reducers from '../reducers';
 // import analyticsMiddleware from './middleware/analytics';

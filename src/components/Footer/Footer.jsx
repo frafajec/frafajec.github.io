@@ -16,18 +16,23 @@ function FooterSocial() {
     <div styleName="content">
       <ul styleName="social-networks">
         <li>
-          <a href={urls.LINKEDIN} target="_blank">
+          <a href={urls.LINKEDIN} target="_blank" rel="noopener noreferrer">
             <Ficon name="linkedin" width={40} height={40} />
           </a>
         </li>
         <li>
-          <a href={urls.GITHUB} target="_blank">
+          <a href={urls.GITHUB} target="_blank" rel="noopener noreferrer">
             <Ficon name="github" width={40} height={40} />
           </a>
         </li>
         <li>
-          <a href={urls.MEDIUM} target="_blank">
+          <a href={urls.MEDIUM} target="_blank" rel="noopener noreferrer">
             <Ficon name="medium" width={40} height={40} />
+          </a>
+        </li>
+        <li>
+          <a href={`mailto:${urls.EMAIL}`} target="_blank" rel="noopener noreferrer">
+            <Ficon name="envelope" width={40} height={40} />
           </a>
         </li>
       </ul>
@@ -88,9 +93,7 @@ function BottomFooter() {
           </li>
         </ul>
       </nav>
-      <span styleName="copyright">
-        Filip Rafajec © {new Date().getFullYear()}
-      </span>
+      <span styleName="copyright">Filip Rafajec © {new Date().getFullYear()}</span>
     </div>
   );
 }

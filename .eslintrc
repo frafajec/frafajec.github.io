@@ -36,6 +36,7 @@
     "function-paren-newline": "off",
     "prefer-destructuring": "off",
     "react/jsx-curly-brace-presence": "off",
-    "object-curly-newline": "off"
+    "object-curly-newline": "off",
+    "jsx-a11y/anchor-is-valid": "off"
   }
 }

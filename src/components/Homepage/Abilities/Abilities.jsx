@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Section, { SectionColumn } from '../../Section';
 import StarRating from './StarRating';
@@ -7,8 +6,6 @@ import StarRating from './StarRating';
 import './Abilities.scssm';
 
 // ------------------------------------------------------------------------------------------------
-const AbilitiesProps = {};
-
 export default function Abilities() {
   return (
     <div styleName="Abilities">
@@ -68,4 +65,3 @@ export default function Abilities() {
     </div>
   );
 }
-Abilities.propTypes = AbilitiesProps;
