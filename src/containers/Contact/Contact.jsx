@@ -21,12 +21,8 @@ function mapDispatchToProps(dispatch) {
 }
 
 // ------------------------------------------------------------------------------------------------
-const ContactProps = {
-  projectId: PropTypes.string,
-};
-const ContactDefaultProps = {
-  projectId: null,
-};
+const ContactProps = {};
+const ContactDefaultProps = {};
 
 class Contact extends React.Component {
   render() {
