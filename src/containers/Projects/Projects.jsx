@@ -13,7 +13,8 @@ import './Projects.scssm';
 
 // ------------------------------------------------------------------------------------------------
 function mapStateToProps(state, ownProps) {
-  let projectId = state.projects.projectId;
+  let { projectId } = state.projects;
+
   if (!projectId) {
     // TODO in init of store!
     projectId = ownProps.match.params.projectId;
@@ -38,11 +39,8 @@ const ProjectsDefaultProps = {
 
 class Projects extends React.Component {
   render() {
-    const notif = (
-      <div>
-        {this.props.projectId}
-      </div>
-    );
+    const notif = <div>{this.props.projectId}</div>;
+
     return (
       <div styleName="Projects">
         {/* <Nav /> */}

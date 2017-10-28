@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 // ------------------------------------------------------------------------------------------------
 const FiconProps = {
   name: PropTypes.string.isRequired,
-  size: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
+  size: PropTypes.number,
+  width: PropTypes.number,
+  height: PropTypes.number,
   style: PropTypes.object,
   className: PropTypes.string,
   onClick: PropTypes.func,

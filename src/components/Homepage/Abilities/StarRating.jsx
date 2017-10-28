@@ -29,11 +29,7 @@ function StarsList({ count }) {
     }
   }
 
-  return (
-    <div styleName="StarsList">
-      {stars}
-    </div>
-  );
+  return <div styleName="StarsList">{stars}</div>;
 }
 StarsList.propTypes = starsProps;
 
@@ -51,9 +47,7 @@ const starRatingDefaults = {
 export default function StarRating({ text, rating }) {
   return (
     <div styleName="StarContainer">
-      <span styleName="text">
-        {text}
-      </span>
+      <span styleName="text">{text}</span>
       <span styleName="stars">
         <StarsList count={rating} />
       </span>
