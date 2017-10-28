@@ -1,13 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import PersonalImage from '../../../assets/personal-image.jpg';
 
 import './Profile.scssm';
 
 // ------------------------------------------------------------------------------------------------
-export default function Profile() {
+const ProfileProps = {
+  id: PropTypes.string.isRequired,
+};
+
+export default function Profile({ id }) {
   return (
-    <div styleName="Profile">
+    <div styleName="Profile" id={id}>
       <h2>Profile</h2>
       <p>Hello there!</p>
 
@@ -41,3 +46,4 @@ export default function Profile() {
     </div>
   );
 }
+Profile.propTypes = ProfileProps;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Section from '../../Section';
 import Tile from './Tile';
@@ -6,9 +7,13 @@ import Tile from './Tile';
 import './Experiences.scssm';
 
 // ------------------------------------------------------------------------------------------------
-export default function Experiences() {
+const ExperiencesProps = {
+  id: PropTypes.string.isRequired,
+};
+
+export default function Experiences({ id }) {
   return (
-    <div styleName="Experiences">
+    <div styleName="Experiences" id={id}>
       <h2>Experiences</h2>
       <p>Hello there!</p>
 
@@ -59,3 +64,4 @@ export default function Experiences() {
     </div>
   );
 }
+Experiences.propTypes = ExperiencesProps;

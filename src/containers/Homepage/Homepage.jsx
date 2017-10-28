@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import { scroller } from 'react-scroll';
+import withRouter from 'react-router-dom/withRouter';
+import scroller from 'react-scroll/modules/mixins/scroller';
 
 import actions from '../../actions';
+import scrollComponents from './constants';
 
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
@@ -22,36 +23,46 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {};
+  return {
+    scrollTo: location => dispatch(actions.scrollTo(location)),
+  };
 }
 
 // ------------------------------------------------------------------------------------------------
 const HomepageProps = {
   browser: PropTypes.object.isRequired,
+  scrollTo: PropTypes.func.isRequired,
 };
 
 class Homepage extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.scrollToHome = this.scrollToHome.bind(this);
+  }
+
+  scrollToHome() {
+    this.props.scrollTo(scrollComponents.homeContainer);
+  }
+
   render() {
-    const scrollToHome = () => {
-      scroller.scrollTo('homeContainer', { smooth: true, duration: 800 });
-    };
     const jumbotronProps = {
       height: this.props.browser.height,
       mainText: 'Filip Rafajec',
-      scrollDown: scrollToHome,
+      scrollDown: this.scrollToHome,
       subText: 'Web developer',
     };
 
     return (
-      <div styleName="Home">
-        {/* <Nav /> */}
+      <div styleName="Home" id={scrollComponents.homeTop}>
+        <Nav />
         <Jumbotron {...jumbotronProps} />
-        <div id="homeContainer" styleName="homeContainer">
-          <Profile />
-          <Contact />
-          <Experiences />
-          <Abilities />
-          <Projects />
+        <div id={scrollComponents.homeContainer} styleName="homeContainer">
+          <Profile id={scrollComponents.homeProfile} />
+          <Contact id={scrollComponents.homeContact} />
+          <Experiences id={scrollComponents.homeExperiences} />
+          <Abilities id={scrollComponents.homeAbilities} />
+          <Projects id={scrollComponents.homeProjects} />
         </div>
         <Footer />
       </div>

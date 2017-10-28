@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Section, { SectionColumn } from '../../Section';
 import StarRating from './StarRating';
@@ -6,9 +7,13 @@ import StarRating from './StarRating';
 import './Abilities.scssm';
 
 // ------------------------------------------------------------------------------------------------
-export default function Abilities() {
+const AbilitiesProps = {
+  id: PropTypes.string.isRequired,
+};
+
+export default function Abilities({ id }) {
   return (
-    <div styleName="Abilities">
+    <div styleName="Abilities" id={id}>
       <h2>Abilities</h2>
       <p>Hello there!</p>
 
@@ -65,3 +70,4 @@ export default function Abilities() {
     </div>
   );
 }
+Abilities.propTypes = AbilitiesProps;

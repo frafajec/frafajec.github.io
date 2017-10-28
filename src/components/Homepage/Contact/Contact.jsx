@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import urls from '../../../constants/urls';
 import Ficon from '../../Ficon';
@@ -6,9 +7,13 @@ import Ficon from '../../Ficon';
 import './Contact.scssm';
 
 // ------------------------------------------------------------------------------------------------
-export default function Contact() {
+const ContactProps = {
+  id: PropTypes.string.isRequired,
+};
+
+export default function Contact({ id }) {
   return (
-    <div styleName="Contact">
+    <div styleName="Contact" id={id}>
       <h2>Contact</h2>
       <p>Catch me - anytime, anywhere</p>
 
@@ -35,3 +40,4 @@ export default function Contact() {
     </div>
   );
 }
+Contact.propTypes = ContactProps;
