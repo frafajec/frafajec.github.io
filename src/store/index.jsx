@@ -1,6 +1,5 @@
 import { compose, createStore, applyMiddleware } from 'redux';
 import persistState from 'redux-localstorage';
-import { keys } from 'lodash';
 
 import reducers from '../reducers';
 // import analyticsMiddleware from './middleware/analytics';
@@ -12,7 +11,7 @@ export default function newStore(overrideState = {}) {
   const initialState = { ...calcInitialState(), ...overrideState };
 
   // override individual properties in each section of the state
-  keys(initialState).map(key => {
+  Object.keys(initialState).map(key => {
     defaultState[key] = { ...defaultState[key], ...initialState[key] };
     return defaultState;
   });
