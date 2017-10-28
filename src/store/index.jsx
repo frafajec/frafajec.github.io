@@ -1,5 +1,4 @@
 import { compose, createStore, applyMiddleware } from 'redux';
-import persistState from 'redux-localstorage';
 
 import reducers from '../reducers';
 // import analyticsMiddleware from './middleware/analytics';
@@ -16,17 +15,6 @@ export default function newStore(overrideState = {}) {
     return defaultState;
   });
 
-  // redux enhancer used for state saving
-  const reduxStorageConfig = {
-    key: 'appState',
-  };
-
-  const enhancer = compose(
-    /* [middlewares] */
-    // persistState(/*paths, config*/)
-    persistState('local', reduxStorageConfig) // local state currently doesn't exist!
-  );
-
   // return createStore(reducers, defaultState, applyMiddleware(analyticsMiddleware));
-  return createStore(reducers, defaultState, enhancer);
+  return createStore(reducers, defaultState);
 }
