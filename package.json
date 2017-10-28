@@ -4,17 +4,17 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
-    "promise": "7.1.1",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-css-modules": "^4.6.0",
-    "react-dom": "^15.6.1",
-    "react-redux": "^5.0.5",
-    "react-router-dom": "^4.1.2",
-    "react-scroll": "^1.5.4",
+    "promise": "^8.0.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-css-modules": "^4.7.1",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-scroll": "^1.6.4",
     "redux": "^3.7.2",
     "redux-localstorage": "^0.4.1",
-    "redux-saga": "^0.15.6"
+    "redux-saga": "^0.16.0"
   },
   "devDependencies": {
     "autoprefixer": "7.1.1",
