@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { withRouter } from 'react-router-dom';
-
-import { Link, routes } from '../../router';
 import urls from '../../constants/urls';
 
 import Ficon from '../Ficon';
@@ -53,15 +50,9 @@ function TopFooter() {
         </li>
       </ul>
       <ul styleName="menu">
-        <li>
-          <Link path={routes.HOME} label={'Home'} />
-        </li>
-        <li>
-          <Link path={routes.PROJECTS} label={'Projects'} />
-        </li>
-        <li>
-          <Link path={routes.CONTACT} label={'Contact'} />
-        </li>
+        <li>{/* <Link path={routes.HOME} label={'Home'} /> */}</li>
+        <li>{/* <Link path={routes.PROJECTS} label={'Projects'} /> */}</li>
+        <li>{/* <Link path={routes.CONTACT} label={'Contact'} /> */}</li>
       </ul>
     </div>
   );
@@ -125,4 +116,4 @@ class Footer extends React.Component {
 Footer.propTypes = FooterProps;
 Footer.defaultProps = FooterDefaultProps;
 
-export default withRouter(Footer);
+export default Footer;

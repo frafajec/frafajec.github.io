@@ -14,13 +14,6 @@ function onWindowResize() {
   };
 }
 
-function updateLocation(location) {
-  return {
-    type: actionTypes.UPDATE_LOCATION,
-    location,
-  };
-}
-
 // no-reduce
 function scrollTo(location) {
   scroller.scrollTo(location, { smooth: true, duration: 800 });
@@ -33,7 +26,6 @@ function scrollTo(location) {
 
 export default {
   setAppLoaded,
-  updateLocation,
   onWindowResize,
   scrollTo,
 };

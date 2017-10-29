@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import { connect } from 'react-redux';
-import withRouter from 'react-router-dom/withRouter';
 
 import actions from '../../actions';
 import scrollComponents from '../../containers/Homepage/constants';
-import { Link, routes } from '../../router';
 import Ficon from '../Ficon';
 
 import './Nav.scssm';
@@ -115,4 +113,4 @@ class Nav extends React.Component {
 }
 Nav.propTypes = NavProps;
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Nav));
+export default connect(mapStateToProps, mapDispatchToProps)(Nav);

@@ -5,7 +5,6 @@
   flex-flow: column;
 
   .homeContainer {
-
     & >:nth-child(2n) {
       background: $paperDark;
     }

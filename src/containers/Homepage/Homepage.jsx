@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import withRouter from 'react-router-dom/withRouter';
 import scroller from 'react-scroll/modules/mixins/scroller';
 
 import actions from '../../actions';
@@ -71,4 +70,4 @@ class Homepage extends React.Component {
 }
 Homepage.propTypes = HomepageProps;
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Homepage));
+export default connect(mapStateToProps, mapDispatchToProps)(Homepage);

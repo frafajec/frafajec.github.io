@@ -4,7 +4,6 @@ export default function calcInitialStore() {
     height: window.innerHeight,
   };
 
-  // TODO Validate that path matches some route, missing path/url!
   const initialStore = {
     app: {
       location: window.location.pathname,
