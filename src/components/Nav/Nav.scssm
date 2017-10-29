@@ -3,7 +3,7 @@
 .Nav {
   position: fixed;
   width: 100%;
-  background: $sexiColor;
+  background: $light;
   border-bottom: 3px solid $cyan;
   z-index: 10;
   opacity: 0;
@@ -37,7 +37,7 @@
   .action {
     border: 0;
     background: transparent;
-    color: $gray;
+    color: $dark;
     padding: 12px;
     font-size: 15px;
     transition: background ease-in 180ms, color ease-in 180ms;
@@ -46,7 +46,7 @@
     outline: none;
 
     &:hover, &:active {
-      background: $textColor;
+      background: $text;
       color: $cyan;
     }
   }

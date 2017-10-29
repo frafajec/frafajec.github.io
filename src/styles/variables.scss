@@ -1,26 +1,15 @@
-$main: white;
-$lowWhite: #f2f2f2;
-
-$gray: #333;
-$darkGray: #222;
-
+// Colors ==========================
+$light: #fafafa;
+$dark: #333;
 $cyan: #22a39f;
-$dusty: #96858f;
-$lavendar: #6d7993;
-$overcast: #9099a2;
-$paper: #d5d5d5;
+
+$text: #434242;
+$textLight: #a7a7a7;
+
+$border: #727878;
+$overcast: #8c8c8c;
 $paperDark: #c5c5c5;
-$sexiColor: #fafafa;
-
-$textColor: #434242;
-$textColorLight: #4b4b4b;
-$textColorHeaven: #a7a7a7;
-$textFaded: #8c8c8c;
-$textBoldColor: #212121;
-
-$borderDark: #727878;
-$borderLight: #c4c4c4;
-$borderHeaven: #aeaeae;
+$paper: #d5d5d5;
 
 // Font ==========================
 $webFont: 'FontAwesome', Arial, Helvetica, sans-serif;

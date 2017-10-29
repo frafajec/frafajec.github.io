@@ -1,17 +1,17 @@
 @import "../../styles/variables.scss";
 
 .Footer {
-  border-top: 1px solid $borderLight;
+  border-top: 1px solid $paperDark;
   font-size: 12px;
   line-height: 16px;
-  color: $textFaded;
+  color: $overcast;
   font-family: $webFont;
   letter-spacing: 1px;
 
   .content {
     text-align: center;
     padding: 30px 0 50px;
-    border-bottom: 1px solid $borderLight;
+    border-bottom: 1px solid $paperDark;
 
     .social-networks {
       font-size: 0;
@@ -35,19 +35,19 @@
           font-size: 25px;
 
           overflow: hidden;
-          border: 1px solid $borderHeaven;
+          border: 1px solid $textLight;
           width: 73px;
           height: 73px;
           position: relative;
           border-radius: 50%;
 
-          color: $textColor;
+          color: $text;
           text-decoration: none;
           background: transparent;
 
           &:hover {
-            background-color: $lowWhite;
-            border-color: $lowWhite;
+            background: $light;
+            border-color: $light;
           }
 
           i {
@@ -63,7 +63,7 @@
     padding: 20px 0;
     font-size: 12px;
     line-height: 16px;
-    color: $textFaded;
+    color: $overcast;
     letter-spacing: 1px;
 
     .links {
@@ -96,7 +96,7 @@
 
         a {
           text-decoration: none;
-          color: $textColorLight;
+          color: $text;
 
           &:hover {
             color: $overcast;
@@ -122,7 +122,7 @@
           position: absolute;
           top: -1px;
           left: -23px;
-          color: $textColorHeaven;
+          color: $text;
           width: 1px;
           height: 12px;
           font-size: 12px;
@@ -138,10 +138,10 @@
 
         a {
           text-decoration: none;
-          color: $textColorLight;
+          color: $text;
 
           &:hover {
-            color: $textColorHeaven;
+            color: $textLight;
           }
         }
       }
@@ -175,14 +175,14 @@
           a {
             display: inline-block;
             vertical-align: top;
-            color: $textColorLight;
+            color: $text;
             padding: 0 0 1px;
             position: relative;
             text-decoration: none;
 
             &:after {
               content: "";
-              background: $textColorHeaven;
+              background: $text;
               height: 1px;
               position: absolute;
               bottom: 0;
@@ -191,7 +191,7 @@
             }
 
             &:hover:after {
-              background: $textColorLight;
+              background: $textLight;
             }
           }
         }

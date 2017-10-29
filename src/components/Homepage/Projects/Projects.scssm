@@ -18,7 +18,7 @@
     font-size: 21px;
     margin-top: 0;
     text-align: center;
-    color: $textColor;
+    color: $text;
     margin-bottom: 25px;
     font-style: italic;
   }
@@ -27,7 +27,7 @@
     margin: 40px 0px;
     opacity: 0.2;
     border: 0;
-    border-top: 1px solid $borderDark;
+    border-top: 1px solid $border;
   }
 
   .content {

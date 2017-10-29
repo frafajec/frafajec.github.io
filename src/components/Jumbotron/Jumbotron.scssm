@@ -11,22 +11,22 @@
 
     h1 {
       padding-bottom: 20px;
-      border-bottom: 1px solid $main;
-      border-bottom-color: rgba(255,255,255,0.35);
-      color: $main;
+      border-bottom: 1px solid $light;
+      border-bottom-color: $overcast;
+      color: $light;
       margin-bottom: 10px;
       font-size: 63px;
     }
 
     p {
       font-size: 28px;
-      color: $main;
+      color: $light;
       margin: 0 0 10px;
     }
   }
 
   .overlay-container {
-    background-color: $lavendar;
+    background-color: $paperDark;
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -47,12 +47,12 @@
     position: absolute;
     bottom: 0px;
     right: 5%;
-    background: $sexiColor;
+    background: $light;
     text-align: center;
     z-index: 6;
 
     font-size: 30px;
-    color: $darkGray;
+    color: $dark;
 
     border: 0;
     padding: 0;

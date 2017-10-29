@@ -1,7 +1,9 @@
+@import '../../styles/variables';
+
 .Section {
   padding-top: 20px;
   margin-top: 40px;
-  border-top: 1px solid rgba(114, 120, 120, 0.2);
+  border-top: 1px solid $paperDark;
 
   &:first-of-type {
     padding-top: 0;
