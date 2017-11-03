@@ -44,6 +44,7 @@
     cursor: pointer;
     user-select: none;
     outline: none;
+    border-radius: 0;
 
     &:hover, &:active {
       background: $text;

@@ -10,6 +10,7 @@ const FiconProps = {
   style: PropTypes.object,
   className: PropTypes.string,
   onClick: PropTypes.func,
+  animate: PropTypes.string,
 };
 
 const FiconDefaultProps = {
@@ -19,6 +20,7 @@ const FiconDefaultProps = {
   style: {},
   className: '',
   onClick: null,
+  animate: '',
 };
 
 const FiconSizes = {
@@ -29,16 +31,22 @@ const FiconSizes = {
   5: 'fa-5x',
 };
 
-export default function Ficon({ name, size, width, height, style, className, onClick }) {
-  const componentStyle = {
-    height,
-    width,
+export default function Ficon({ name, size, width, height, style, className, onClick, animate }) {
+  const coreStyle = {
     ...style,
   };
 
+  const componentStyle = animate
+    ? { ...coreStyle }
+    : {
+        height,
+        width,
+        ...style,
+      };
+
   return (
     <i
-      className={`fa fa-${name} ${FiconSizes[size]} ${className}`}
+      className={`fa fa-${name} fa-${animate} ${FiconSizes[size]} ${className}`}
       style={componentStyle}
       onClick={onClick}
       aria-hidden="true"

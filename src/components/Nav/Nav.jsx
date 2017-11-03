@@ -4,6 +4,7 @@ import cn from 'classnames';
 
 import { connect } from 'react-redux';
 
+import { partial } from '../../utils';
 import actions from '../../actions';
 import scrollComponents from '../../containers/Homepage/constants';
 import Ficon from '../Ficon';
@@ -11,10 +12,6 @@ import Ficon from '../Ficon';
 import './Nav.scssm';
 
 // ------------------------------------------------------------------------------------------------
-function mapStateToProps(state) {
-  return {};
-}
-
 function mapDispatchToProps(dispatch) {
   return {
     scrollTo: location => dispatch(actions.scrollTo(location)),
@@ -36,7 +33,6 @@ class Nav extends React.Component {
 
     this.mouseScroll = this.mouseScroll.bind(this);
     this.scrollTo = this.scrollTo.bind(this);
-    // this.debounce = this.debounce.bind(this);
   }
 
   componentDidMount() {
@@ -45,29 +41,6 @@ class Nav extends React.Component {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.mouseScroll);
-  }
-
-  // debounce(func, wait, immediate) {
-  //   var timeout;
-  //   return function() {
-  //     var context = this,
-  //       args = arguments;
-  //     var later = function() {
-  //       timeout = null;
-  //       if (!immediate) func.apply(context, args);
-  //     };
-  //     var callNow = immediate && !timeout;
-  //     clearTimeout(timeout);
-  //     timeout = setTimeout(later, wait);
-  //     if (callNow) func.apply(context, args);
-  //   };
-  // }
-
-  // takes original fn and args
-  partial(fn, ...fnArgs) {
-    return () => {
-      fn(...fnArgs);
-    };
   }
 
   mouseScroll() {
@@ -87,23 +60,23 @@ class Nav extends React.Component {
 
     return (
       <div styleName={classes}>
-        <button styleName="logo" onClick={this.partial(this.scrollTo, scrollComponents.homeTop)}>
+        <button styleName="logo" onClick={partial(this.scrollTo, scrollComponents.homeTop)}>
           <Ficon name="github-alt" />
         </button>
         <div styleName="Nav-left">
-          <button styleName="action" onClick={this.partial(this.scrollTo, scrollComponents.homeProfile)}>
+          <button styleName="action" onClick={partial(this.scrollTo, scrollComponents.homeProfile)}>
             Profile
           </button>
-          <button styleName="action" onClick={this.partial(this.scrollTo, scrollComponents.homeContact)}>
+          <button styleName="action" onClick={partial(this.scrollTo, scrollComponents.homeContact)}>
             Contact
           </button>
-          <button styleName="action" onClick={this.partial(this.scrollTo, scrollComponents.homeExperiences)}>
+          <button styleName="action" onClick={partial(this.scrollTo, scrollComponents.homeExperiences)}>
             Experiences
           </button>
-          <button styleName="action" onClick={this.partial(this.scrollTo, scrollComponents.homeAbilities)}>
+          <button styleName="action" onClick={partial(this.scrollTo, scrollComponents.homeAbilities)}>
             Abilities
           </button>
-          <button styleName="action" onClick={this.partial(this.scrollTo, scrollComponents.homeProjects)}>
+          <button styleName="action" onClick={partial(this.scrollTo, scrollComponents.homeProjects)}>
             Projects
           </button>
         </div>
@@ -113,4 +86,4 @@ class Nav extends React.Component {
 }
 Nav.propTypes = NavProps;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Nav);
+export default connect(null, mapDispatchToProps)(Nav);

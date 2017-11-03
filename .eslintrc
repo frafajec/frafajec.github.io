@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   "extends": "airbnb",
   "env": {
     "es6": true,
@@ -12,6 +13,7 @@
     "window": true
   },
   "rules": {
+    "indent": "off",
     "no-use-before-define": 0,
     "no-param-reassign": "off",
     "arrow-parens": "off",
@@ -26,10 +28,13 @@
     "max-len": "off",
     "react/jsx-indent": "off",
     "react/forbid-prop-types": "off",
+    "react/no-did-mount-set-state": "off",
     "function-paren-newline": "off",
     "prefer-destructuring": "off",
     "react/jsx-curly-brace-presence": "off",
     "object-curly-newline": "off",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "prefer-rest-params": "off",
+    "no-useless-computed-key": "off"
   }
 }

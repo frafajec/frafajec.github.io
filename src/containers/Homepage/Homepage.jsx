@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
-import scroller from 'react-scroll/modules/mixins/scroller';
 
 import actions from '../../actions';
 import scrollComponents from './constants';
@@ -24,6 +23,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     scrollTo: location => dispatch(actions.scrollTo(location)),
+    setJumbotronLoaded: () => dispatch(actions.setJumbotronLoaded()),
   };
 }
 
@@ -31,6 +31,7 @@ function mapDispatchToProps(dispatch) {
 const HomepageProps = {
   browser: PropTypes.object.isRequired,
   scrollTo: PropTypes.func.isRequired,
+  setJumbotronLoaded: PropTypes.func.isRequired,
 };
 
 class Homepage extends React.Component {
@@ -50,6 +51,7 @@ class Homepage extends React.Component {
       mainText: 'Filip Rafajec',
       scrollDown: this.scrollToHome,
       subText: 'Web developer',
+      onLoad: this.props.setJumbotronLoaded,
     };
 
     return (

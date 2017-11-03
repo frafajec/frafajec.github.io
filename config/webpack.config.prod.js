@@ -170,6 +170,7 @@ module.exports = {
                     },
                   },
                 ],
+                'syntax-dynamic-import',
               ],
             },
           },

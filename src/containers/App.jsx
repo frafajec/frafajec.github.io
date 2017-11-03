@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 import actions from '../actions';
 
-import Homepage from './Homepage';
 import Loader from '../components/Loader';
 
 import './App.scssm';
@@ -34,20 +33,49 @@ const AppProps = {
 };
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loaded: props.loaded,
+      lazyHomepage: null,
+    };
+  }
+
   componentDidMount() {
     window.addEventListener('resize', this.props.onWindowResize);
     this.props.setAppLoaded();
+
+    this.LoadHomepage();
+  }
+
+  // when state is loaded, wait for animation to complete to remove loader
+  componentWillReceiveProps(nextProps) {
+    if (!this.state.loaded && nextProps.loaded) {
+      setTimeout(
+        () =>
+          this.setState({
+            loaded: true,
+          }),
+        400
+      );
+    }
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.props.onWindowResize);
   }
 
+  async LoadHomepage() {
+    const { default: Homepage } = await import('./Homepage');
+    this.setState({ lazyHomepage: <Homepage /> });
+  }
+
   render() {
     return (
       <div styleName="App">
-        {this.props.loaded ? null : <Loader />}
-        <Homepage />
+        {this.state.loaded ? null : <Loader loaded={this.props.loaded} />}
+        {this.state.lazyHomepage}
       </div>
     );
   }

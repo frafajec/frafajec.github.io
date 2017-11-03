@@ -3,8 +3,15 @@ import actionTypes from '../constants/actionTypes';
 
 function setAppLoaded() {
   return {
-    type: actionTypes.SET_LOADED,
-    loaded: true,
+    type: actionTypes.SET_APP_LOADED,
+    app: true,
+  };
+}
+
+function setJumbotronLoaded() {
+  return {
+    type: actionTypes.SET_JUMBOTRON_LOADED,
+    jumbotron: true,
   };
 }
 
@@ -26,6 +33,7 @@ function scrollTo(location) {
 
 export default {
   setAppLoaded,
+  setJumbotronLoaded,
   onWindowResize,
   scrollTo,
 };

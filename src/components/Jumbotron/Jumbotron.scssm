@@ -60,6 +60,9 @@
     outline: none;
     cursor: pointer;
 
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
     &:hover, &:active {
       color: $cyan;
     }
