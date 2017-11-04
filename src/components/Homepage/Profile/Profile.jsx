@@ -12,7 +12,7 @@ const ProfileProps = {
 
 export default function Profile({ id }) {
   return (
-    <div styleName="Profile" id={id}>
+    <div styleName="Profile" id={id} className="homepage-page">
       <h2>Profile</h2>
       <p>Hello there!</p>
 

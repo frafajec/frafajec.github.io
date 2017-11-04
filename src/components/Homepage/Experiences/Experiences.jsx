@@ -13,7 +13,7 @@ const ExperiencesProps = {
 
 export default function Experiences({ id }) {
   return (
-    <div styleName="Experiences" id={id}>
+    <div styleName="Experiences" id={id} className="homepage-page">
       <h2>Experiences</h2>
       <p>Hello there!</p>
 

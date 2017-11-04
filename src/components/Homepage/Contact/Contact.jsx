@@ -13,7 +13,7 @@ const ContactProps = {
 
 export default function Contact({ id }) {
   return (
-    <div styleName="Contact" id={id}>
+    <div styleName="Contact" id={id} className="homepage-page">
       <h2>Contact</h2>
       <p>Catch me - anytime, anywhere</p>
 

@@ -13,7 +13,7 @@ const AbilitiesProps = {
 
 export default function Abilities({ id }) {
   return (
-    <div styleName="Abilities" id={id}>
+    <div styleName="Abilities" id={id} className="homepage-page">
       <h2>Abilities</h2>
       <p>Hello there!</p>
 

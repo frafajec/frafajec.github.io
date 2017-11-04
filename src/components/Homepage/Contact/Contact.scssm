@@ -1,8 +1,6 @@
 @import '../../../styles/variables';
 
 .Contact {
-  padding: 40px 180px;
-
   h2 {
     font-size: 54px;
     text-align: center;
