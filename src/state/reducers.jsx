@@ -1,4 +1,6 @@
-import actionTypes from '../constants/actionTypes';
+import { combineReducers } from 'redux';
+
+import actionTypes from './actionTypes';
 
 const defaultState = {
   browser: {},
@@ -52,7 +54,9 @@ const handlers = {
   [actionTypes.WINDOW_RESIZE]: onWindowResize,
 };
 
-export default function app(state = defaultState, action) {
+export function app(state = defaultState, action) {
   const handler = handlers[action.type];
   return handler ? handler(state, action) : state;
 }
+
+export default combineReducers({ app });

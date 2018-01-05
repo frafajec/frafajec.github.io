@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 
-import actions from '../actions';
+import actions from '../state/actions';
 
 import Loader from '../components/Loader';
 

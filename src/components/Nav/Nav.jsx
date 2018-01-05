@@ -4,9 +4,9 @@ import cn from 'classnames';
 
 import { connect } from 'react-redux';
 
-import { partial } from '../../utils';
-import actions from '../../actions';
-import scrollComponents from '../../containers/Homepage/constants';
+import { partial } from '../../utils/helpers';
+import actions from '../../state/actions';
+import scrollComponents from '../../modules/Homepage/constants';
 import Ficon from '../Ficon';
 
 import './Nav.scssm';

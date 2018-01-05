@@ -2,10 +2,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
-import registerServiceWorker from './registerServiceWorker';
-import newStore from './store';
+import registerServiceWorker from './utils/registerServiceWorker';
+import newStore from './state/store';
 
-import App from './containers/App';
+import App from './modules/App';
 
 import './styles/index.scss';
 

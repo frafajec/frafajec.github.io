@@ -15,7 +15,7 @@ export default function Abilities({ id }) {
   return (
     <div styleName="Abilities" id={id} className="homepage-page">
       <h2>Abilities</h2>
-      <p>Hello there!</p>
+      <p>All mighty and Web strong!</p>
 
       <hr />
 
@@ -26,7 +26,8 @@ export default function Abilities({ id }) {
             <StarRating text={'React'} rating={5} />
             <StarRating text={'Redux'} rating={5} />
             <StarRating text={'SCSS / Animations'} rating={5} />
-            <StarRating text={'Sagas'} rating={4} />
+            <StarRating text={'Thunk / Saga'} rating={5} />
+            <StarRating text={'Typescript'} rating={4} />
             <StarRating text={'NodeJS'} rating={3} />
             <StarRating text={'AngularJS'} rating={3} />
           </SectionColumn>
@@ -35,6 +36,7 @@ export default function Abilities({ id }) {
             <StarRating text={'Team organisation'} rating={5} />
             <StarRating text={'Agile / Sprinting'} rating={5} />
             <StarRating text={'Python / Django'} rating={4} />
+            <StarRating text={'Jest / Enzyme'} rating={4} />
             <StarRating text={'WebGL / Regl'} rating={1} />
           </SectionColumn>
         </Section>

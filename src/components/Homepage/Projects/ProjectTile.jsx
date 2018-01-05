@@ -25,6 +25,10 @@ export default function ProjectTile({ title, desc, img, url }) {
             <span styleName="title">{title}</span>
             <hr />
             <span styleName="desc">{desc}</span>
+
+            <div styleName="preview">
+              <button>Preview</button>
+            </div>
           </div>
           <img src={img} alt={title} />
         </div>

@@ -1,5 +1,5 @@
 import scroller from 'react-scroll/modules/mixins/scroller';
-import actionTypes from '../constants/actionTypes';
+import actionTypes from './actionTypes';
 
 function setAppLoaded() {
   return {
