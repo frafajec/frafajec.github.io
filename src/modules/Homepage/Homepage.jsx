@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import actions from '../../state/actions';
 import scrollComponents from './constants';
 
+import BetaPopup from './Notifications/BetaPopup';
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 import Jumbotron from '../../components/Jumbotron';
@@ -58,6 +59,7 @@ class Homepage extends React.Component {
       <div styleName="Home" id={scrollComponents.homeTop}>
         <Nav />
         <Jumbotron {...jumbotronProps} />
+        <BetaPopup />
         <div id={scrollComponents.homeContainer} styleName="homeContainer">
           <Profile id={scrollComponents.homeProfile} />
           <Contact id={scrollComponents.homeContact} />

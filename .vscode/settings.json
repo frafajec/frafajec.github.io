@@ -6,5 +6,8 @@
     "scss"
   ],
   "editor.formatOnPaste": false,
-  "editor.tabCompletion": true
+  "editor.tabCompletion": true,
+  "cSpell.words": [
+    "Ficon"
+  ]
 }
