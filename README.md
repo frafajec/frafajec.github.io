@@ -1,4 +1,4 @@
-# Filip Rafajec ![Dev-logo](https://github.com/frafajec/frafajec.github.io/blob/develop/assets/katze_cyan.png?raw=true "Logo")
+# Filip Rafajec <img src="https://github.com/frafajec/frafajec.github.io/raw/develop/assets/katze_cyan.png?raw=true" width="42" height="35">
 
 ## Hello there
 
