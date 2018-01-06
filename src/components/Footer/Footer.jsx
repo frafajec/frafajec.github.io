@@ -1,11 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { partial } from '../../utils/helpers';
 import urls from '../../constants/urls';
 
+import TermsPopup from './Popups/Terms';
+import PrivacyPopup from './Popups/Privacy';
 import Ficon from '../Ficon';
 
 import './Footer.scssm';
+
+const POPUPS = {
+  TERMS: 'terms',
+  PRIVACY: 'privacy',
+};
 
 // ------------------------------------------------------------------------------------------------
 function FooterSocial() {
@@ -38,15 +46,15 @@ function FooterSocial() {
 }
 
 // ------------------------------------------------------------------------------------------------
-function TopFooter() {
+function TopFooter({ togglePopup }) {
   return (
     <div styleName="top-footer">
       <ul styleName="links">
         <li>
-          <a href="">Privacy</a>
+          <span onClick={partial(togglePopup, POPUPS.PRIVACY)}>Privacy</span>
         </li>
         <li>
-          <a href="">Terms</a>
+          <span onClick={partial(togglePopup, POPUPS.TERMS)}>Terms</span>
         </li>
       </ul>
       <ul styleName="menu">
@@ -57,6 +65,9 @@ function TopFooter() {
     </div>
   );
 }
+TopFooter.propTypes = {
+  togglePopup: PropTypes.func.isRequired,
+};
 
 // ------------------------------------------------------------------------------------------------
 function BottomFooter() {
@@ -98,15 +109,36 @@ const FooterDefaultProps = {
 };
 
 class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      [POPUPS.TERMS]: false,
+      [POPUPS.PRIVACY]: false,
+    };
+
+    this.togglePopup = this.togglePopup.bind(this);
+  }
+
+  togglePopup(popup) {
+    this.setState({
+      [popup]: !this.state[popup],
+    });
+  }
+
   render() {
     const { social } = this.props;
+    const { terms, privacy } = this.state;
 
     return (
       <div styleName="Footer">
         {social ? <FooterSocial /> : null}
 
         <div className="container">
-          <TopFooter />
+          <TermsPopup togglePopup={partial(this.togglePopup, POPUPS.TERMS)} visible={terms} />
+          <PrivacyPopup togglePopup={partial(this.togglePopup, POPUPS.PRIVACY)} visible={privacy} />
+
+          <TopFooter togglePopup={this.togglePopup} />
           <BottomFooter />
         </div>
       </div>
