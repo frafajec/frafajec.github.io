@@ -39,15 +39,18 @@ export default function Popup({ title, children, size, onClose }) {
   };
 
   return (
-    <div styleName={classes}>
-      <div styleName="title">
-        <h2>{title}</h2>
-        <div styleName="closeIcon" onClick={onClose}>
-          <Ficon name="close" width={50} height={50} style={closeStyle} />
+    <div styleName="PopupContainer">
+      <div styleName="shadow" />
+      <div styleName={classes}>
+        <div styleName="title">
+          <h2>{title}</h2>
+          <div styleName="closeIcon" onClick={onClose}>
+            <Ficon name="close" width={50} height={50} style={closeStyle} />
+          </div>
+          <hr />
         </div>
-        <hr />
+        <div styleName="container">{children}</div>
       </div>
-      <div styleName="container">{children}</div>
     </div>
   );
 }

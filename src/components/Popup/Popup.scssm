@@ -1,63 +1,76 @@
 @import '../../styles/variables';
 
-.Popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 1000;
+.PopupContainer {
+  .shadow {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 
-  display: flex;
-  flex-direction: column;
+    background: rgba(0,0,0,0.7);
+  }
 
-  background: $light;
-  border: 3px solid $cyan;
-  border-radius: 5px;
-  padding: 10px;
+  .Popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
 
-  .title {
-    margin: 20px 0;
-    flex: 0;
+    display: flex;
+    flex-direction: column;
 
-    h2 {
-      margin: 0;
-    }
+    background: $light;
+    border: 3px solid $cyan;
+    border-radius: 5px;
+    padding: 10px;
 
-    .closeIcon {
-      position: absolute;
-      right: 0;
-      top: 0;
+    .title {
+      margin: 20px 0;
+      flex: 0;
 
-      i {
-        &:hover, &:active {
-          color: $cyan;
+      h2 {
+        margin: 0;
+      }
+
+      .closeIcon {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        i {
+          &:hover, &:active {
+            color: $cyan;
+          }
         }
       }
     }
-  }
 
-  .container {
-    flex: 1;
-    position: relative;
-  }
+    .container {
+      flex: 1;
+      position: relative;
+    }
 
-  &.small {
-    width: 20%;
-    height: 20%;
-    margin-top: -10%;
-    margin-left: -10%;
-  }
+    &.small {
+      height: 150px;
+      margin-top: -175px;
+      width: 250px;
+      margin-left: -125px;
+    }
 
-  &.normal {
-    width: 50%;
-    height: 50%;
-    margin-top: -25%;
-    margin-left: -25%;
-  }
+    &.normal {
+      height: 500px;
+      margin-top: -250px;
+      width: 600px;
+      margin-left: -300px;
+    }
 
-  &.fullscreen {
-    width: 80%;
-    height: 80%;
-    margin-top: -40%;
-    margin-left: -40%;
+    &.fullscreen {
+      height: 750px;
+      margin-top: -325px;
+      width: 900px;
+      margin-left: -450px;
+    }
   }
 }
