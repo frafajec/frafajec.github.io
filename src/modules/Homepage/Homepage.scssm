@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.Home {
+  display: flex;
+  flex-flow: column;
+
+  .homeContainer {
+    & >:nth-child(2n) {
+      background: $paperDark;
+    }
+  }
+}

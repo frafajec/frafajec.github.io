@@ -1,0 +1,15 @@
+{
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "es5",
+  "prettier.singleQuote": true,
+  "prettier.cssEnable": [
+    "scss"
+  ],
+  "editor.formatOnPaste": false,
+  "editor.tabCompletion": true,
+  "cSpell.words": [
+    "Ficon",
+    "Informatics",
+    "deployable"
+  ]
+}

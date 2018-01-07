@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import '../../../styles/variables';
+
+.Experiences {
+  h2 {
+    font-size: 54px;
+    text-align: center;
+    margin: 10px 0 5px;
+  }
+
+  h2, h3 {
+    font-weight: 300;
+    color: $cyan;
+  }
+
+  p {
+    font-size: 21px;
+    margin-top: 0;
+    text-align: center;
+    color: $text;
+    margin-bottom: 25px;
+    font-style: italic;
+  }
+
+  hr {
+    margin: 40px 0px;
+    opacity: 0.2;
+    border: 0;
+    border-top: 1px solid $border;
+  }
+
+  .content {
+  }
+}
+
+.Tile {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 10px 0;
+
+  .tile-chrono {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 30%;
+
+    .name {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 10px 0;
+
+    }
+
+    .date {
+      margin-bottom: 10px;
+    }
+  }
+
+  .tile-about {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    width: 70%;
+
+    .title {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 10px 0;
+
+    }
+    .desc {
+
+    }
+
+    .additional {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      color: $cyan;
+
+      & > * {
+        margin-left: 10px;
+        display: flex;
+        flex-flow: row;
+        align-items: flex-end;
+
+        &:before {
+          content: "|";
+          color: $textLight;
+          position: absolute;
+        }
+
+        &:first-of-type {
+          margin-left: 0;
+
+          &:before {
+            content: '';
+          }
+
+          span {
+            padding-left: 0;
+          }
+        }
+
+        span {
+          padding-left: 12px;
+        }
+      }
+
+      .location {
+        position: relative;
+
+      }
+
+      .url {
+        position: relative;
+
+        i {
+          padding-left: 10px;
+        }
+
+        a {
+          padding-left: 6px;
+          text-decoration: none;
+          color: $cyan;
+
+          &:hover, &:active {
+            text-decoration: underline;
+            color: $cyan;
+          }
+        }
+      }
+
+    }
+  }
+}
