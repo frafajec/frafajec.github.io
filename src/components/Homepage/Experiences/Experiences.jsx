@@ -15,50 +15,58 @@ export default function Experiences({ id }) {
   return (
     <div styleName="Experiences" id={id} className="homepage-page">
       <h2>Experiences</h2>
-      <p>Hello there!</p>
+      <p>“Failure is the condiment that gives success its flavor.” ― Truman Capote</p>
 
       <hr />
 
       <div styleName="content">
         <Section title="Education">
           <Tile
-            name="State University"
+            name="Technical University Graz"
             date="2013 - 2014"
-            title="Machine learning"
-            desc="I have learned here a lot of things, who would know what not..."
+            title="Computer Science"
+            desc="General knowledge in IT world and modern approaches towards growing problems and new technologies in play."
             location="Graz, Austria"
-            url="todo be url"
+            url="www.tugraz.at"
           />
           <Tile
-            name="Somewhere"
-            date="June 2011 - July 2014"
-            title="Workaround"
-            desc="Bla bla bla bla bla bla adadsadasdasd asdasd ad asdasdsdas dasd sadas a dasd sa ddsda"
+            name="Faculty of Organization and Informatics"
+            date="2011 - 2014"
+            title="Information Systems"
+            desc="Foundation of informatics and economics with social and organisational aspects."
+            location="Varazdin, Croatia"
+            url="www.foi.hr"
           />
           <Tile
-            name="Home"
+            name="Mathematical Gymnasium"
             date="2010 - 2015"
-            title="Peronal projects"
-            desc="I have learned here a lot of things, who would know what not... adasd asdad asd asd asdasasdasd a a dsad as"
-            location="Test location"
+            title="General education"
+            desc="Foundation for science."
+            location="Varazdin, Croatia"
           />
         </Section>
         <Section title="Work">
           <Tile
             name="Parkside"
-            date="June 2011 - July 2014"
-            title="Workaround"
-            desc="Bla bla bla bla bla bla adadsadasdasd asdasd ad asdasdsdas dasd sadas a dasd sa ddsda"
+            date="2016 - Present"
+            title="Web Developer & Project Manager"
+            desc="Leading team of engineers through cutting-edge web projects and challenges."
             location="Graz, Austria"
           />
           <Tile
             name="Info3"
-            date="2013 - 2014"
-            title="Machine learning"
-            desc="I have learned here a lot of things, who would know what not..."
+            date="2014 - 2016"
+            title="Full-Stack Developer"
+            desc="Worked with ERP systems and developing Web apps."
             location="Varazdin, Croatia"
           />
-          <Tile name="Freelance" date="2011 - 2013" title="Web projects" desc="bla bla" location="Worldwide" />
+          <Tile
+            name="Freelance"
+            date="2011 - Present"
+            title="Web projects"
+            desc="Working on lean project for money or glory!"
+            location="Worldwide"
+          />
         </Section>
       </div>
     </div>

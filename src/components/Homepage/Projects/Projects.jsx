@@ -15,7 +15,7 @@ export default function Projects() {
   return (
     <div styleName="Projects" className="homepage-page">
       <h2>Projects</h2>
-      <p>Small but worthy subset!</p>
+      <p>”Do or do not, there is no try.” - Yoda</p>
 
       <hr />
 

@@ -12,8 +12,14 @@ export default class BetaPopup extends React.Component {
   constructor(props) {
     super(props);
 
+    const docCookie = document.cookie;
+
+    if (!docCookie.length) {
+      document.cookie = 'betaCookie=1;';
+    }
+
     this.state = {
-      visible: true,
+      visible: !docCookie.length,
     };
 
     this.closePopup = this.closePopup.bind(this);

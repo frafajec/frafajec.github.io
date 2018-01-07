@@ -11,10 +11,15 @@ const ProfileProps = {
 };
 
 export default function Profile({ id }) {
+  const diffYears = (dt2, dt1) => {
+    const diff = (dt2.getTime() - dt1.getTime()) / 1000;
+    return Math.abs(Math.round(diff / (60 * 60 * 24) / 365.25));
+  };
+
   return (
     <div styleName="Profile" id={id} className="homepage-page">
       <h2>Profile</h2>
-      <p>Hello there!</p>
+      <p>”We become what we think about.” - Earl Nightingale</p>
 
       <hr />
 
@@ -37,7 +42,7 @@ export default function Profile({ id }) {
             <strong>Name</strong>
             <span>Filip Rafajec</span>
             <strong>Age</strong>
-            <span>25</span>
+            <span>{diffYears(new Date(), new Date(1992, 9, 20))}</span>
             <strong>Location</strong>
             <span>Graz, Austria</span>
           </p>
