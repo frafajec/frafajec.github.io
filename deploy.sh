@@ -41,6 +41,7 @@ then
     echo "-- Commiting --"
     git add .
     git commit -am "Deploy commit"
+    git push origin master
 
 else
     echo ""
