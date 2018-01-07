@@ -14,8 +14,6 @@ const paths = require('./paths');
 const getClientEnvironment = require('./env');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-// var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
 const publicPath = paths.servedPath;
@@ -250,7 +248,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'common', // Specify the common bundle's name.
     }),
