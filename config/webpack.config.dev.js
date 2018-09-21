@@ -44,9 +44,9 @@ module.exports = {
     // Note: instead of the default WebpackDevServer client, we use a custom one
     // to bring better experience for Create React App users. You can replace
     // the line below with these two lines if you prefer the stock client:
-    // require.resolve('webpack-dev-server/client') + '?/',
-    // require.resolve('webpack/hot/dev-server'),
-    require.resolve('react-dev-utils/webpackHotDevClient'),
+    require.resolve('webpack-dev-server/client') + '?/',
+    require.resolve('webpack/hot/dev-server'),
+    // require.resolve('react-dev-utils/webpackHotDevClient'),
     // Finally, this is your app's code:
     paths.appIndexJs,
     // We include the app code last so that if there is a runtime error during
@@ -65,7 +65,8 @@ module.exports = {
     // This is the URL that app is served from. We use "/" in development.
     publicPath: publicPath,
     // Point sourcemap entries to original disk location (format as URL on Windows)
-    devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
+    devtoolModuleFilenameTemplate: info =>
+      path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
@@ -82,7 +83,18 @@ module.exports = {
     // https://github.com/facebookincubator/create-react-app/issues/290
     // `web` extension prefixes have been added for better support
     // for React Native Web.
-    extensions: ['.mjs', '.web.ts', '.ts', '.web.tsx', '.tsx', '.web.js', '.js', '.json', '.web.jsx', '.jsx'],
+    extensions: [
+      '.mjs',
+      '.web.ts',
+      '.ts',
+      '.web.tsx',
+      '.tsx',
+      '.web.js',
+      '.js',
+      '.json',
+      '.web.jsx',
+      '.jsx',
+    ],
     alias: {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
@@ -191,6 +203,27 @@ module.exports = {
                 loader: require.resolve('sass-loader'),
                 options: {
                   includePaths: [paths.appSrc],
+                },
+              },
+            ],
+          },
+          // Allows you to use two kinds of imports for SVG:
+          // import logoUrl from './logo.svg'; gives you the URL.
+          // import { ReactComponent as Logo } from './logo.svg'; gives you a component.
+          {
+            test: /\.svg$/,
+            use: [
+              {
+                loader: require.resolve('babel-loader'),
+                options: {
+                  cacheDirectory: true,
+                },
+              },
+              require.resolve('@svgr/webpack'),
+              {
+                loader: require.resolve('file-loader'),
+                options: {
+                  name: 'static/media/[name].[hash:8].[ext]',
                 },
               },
             ],

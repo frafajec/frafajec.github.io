@@ -53,6 +53,7 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
+    "@svgr/webpack": "^2.4.1",
     "@types/jest": "^23.3.2",
     "@types/node": "^10.10.1",
     "@types/react": "^16.4.14",

@@ -1,17 +1,16 @@
 import * as React from 'react';
 import * as cn from 'classnames';
 
+import { ReactComponent as Logo } from './logo.svg';
+
 import styles from './App.scssm';
-// const logo = require('./logo.svg');
-import { Logo } from './logo.svg';
 
 class App extends React.Component {
   render() {
     return (
       <div className={cn(styles.App, styles.App2)}>
         <div className={styles.AppHeader}>
-          {/* <img src={'logo'} className={styles.AppLogo} alt="logo" /> */}
-          <Logo />
+          <Logo className={styles.AppLogo} />
           <h2>Welcome to React</h2>
         </div>
         <p className={styles.AppIntro}>

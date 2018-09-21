@@ -70,7 +70,8 @@ module.exports = {
     // We inferred the "public path" (such as / or /my-project) from homepage.
     publicPath: publicPath,
     // Point sourcemap entries to original disk location (format as URL on Windows)
-    devtoolModuleFilenameTemplate: info => path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, '/'),
+    devtoolModuleFilenameTemplate: info =>
+      path.relative(paths.appSrc, info.absoluteResourcePath).replace(/\\/g, '/'),
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
@@ -87,7 +88,18 @@ module.exports = {
     // https://github.com/facebookincubator/create-react-app/issues/290
     // `web` extension prefixes have been added for better support
     // for React Native Web.
-    extensions: ['.mjs', '.web.ts', '.ts', '.web.tsx', '.tsx', '.web.js', '.js', '.json', '.web.jsx', '.jsx'],
+    extensions: [
+      '.mjs',
+      '.web.ts',
+      '.ts',
+      '.web.tsx',
+      '.tsx',
+      '.web.js',
+      '.js',
+      '.json',
+      '.web.jsx',
+      '.jsx',
+    ],
     alias: {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
@@ -262,6 +274,31 @@ module.exports = {
               )
             ),
             // Note: this won't work without `new ExtractTextPlugin()` in `plugins`.
+          },
+          // Allows you to use two kinds of imports for SVG:
+          // import logoUrl from './logo.svg'; gives you the URL.
+          // import { ReactComponent as Logo } from './logo.svg'; gives you a component.
+          {
+            test: /\.svg$/,
+            use: [
+              {
+                loader: require.resolve('babel-loader'),
+                options: {
+                  // @remove-on-eject-begin
+                  babelrc: false,
+                  presets: [require.resolve('babel-preset-react-app')],
+                  // @remove-on-eject-end
+                  cacheDirectory: true,
+                },
+              },
+              require.resolve('svgr/webpack'),
+              {
+                loader: require.resolve('file-loader'),
+                options: {
+                  name: 'static/media/[name].[hash:8].[ext]',
+                },
+              },
+            ],
           },
           // "file" loader makes sure assets end up in the `build` folder.
           // When you `import` an asset, you get its filename.
