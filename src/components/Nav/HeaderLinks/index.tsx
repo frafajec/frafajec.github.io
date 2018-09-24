@@ -12,11 +12,13 @@ import { urls } from 'core/constants';
 import styles from './styles';
 
 // ------------------------------------------------------------
-interface IHeaderLinksProps extends WithStyles<typeof styles> {}
+interface IHeaderLinksProps extends WithStyles<typeof styles> {
+  readonly drawer?: boolean;
+}
 
 // ------------------------------------------------------------
 function HeaderLinks({ ...props }: IHeaderLinksProps) {
-  const { classes } = props;
+  const { classes, drawer = false } = props;
 
   return (
     <List className={classes.list}>
@@ -29,6 +31,7 @@ function HeaderLinks({ ...props }: IHeaderLinksProps) {
         >
           <Button href={`mailto:${urls.EMAIL}`} className={classes.navLink}>
             <i className={classes.icons + ' fas fa-envelope'} />
+            {drawer ? <span className={classes.navLinkText}>Send me an email</span> : null}
           </Button>
         </Tooltip>
       </ListItem>
@@ -41,18 +44,20 @@ function HeaderLinks({ ...props }: IHeaderLinksProps) {
         >
           <Button href={urls.LINKEDIN} target="_blank" className={classes.navLink}>
             <i className={classes.icons + ' fab fa-linkedin'} />
+            {drawer ? <span className={classes.navLinkText}>Reach me on linkedin</span> : null}
           </Button>
         </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
           id="github"
-          title="Check my code on git"
+          title="Check my code on github"
           placement={window.innerWidth > 959 ? 'top' : 'left'}
           classes={{ tooltip: classes.tooltip }}
         >
           <Button href={urls.GITHUB} target="_blank" className={classes.navLink}>
             <i className={classes.icons + ' fab fa-github'} />
+            {drawer ? <span className={classes.navLinkText}>Check my code on github</span> : null}
           </Button>
         </Tooltip>
       </ListItem>
@@ -65,6 +70,7 @@ function HeaderLinks({ ...props }: IHeaderLinksProps) {
         >
           <Button href={urls.MEDIUM} target="_blank" className={classes.navLink}>
             <i className={classes.icons + ' fab fa-medium'} />
+            {drawer ? <span className={classes.navLinkText}>Follow me on medium</span> : null}
           </Button>
         </Tooltip>
       </ListItem>

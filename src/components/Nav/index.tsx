@@ -76,7 +76,7 @@ class Header extends React.Component<IHeaderProps, IHeaderState> {
 
           <Hidden mdUp>
             <IconButton color="inherit" aria-label="open drawer" onClick={this.handleDrawerToggle}>
-              <Menu />
+              <Menu className={classes.mobileMenu} />
             </IconButton>
           </Hidden>
         </Toolbar>
@@ -92,7 +92,7 @@ class Header extends React.Component<IHeaderProps, IHeaderState> {
             onClose={this.handleDrawerToggle}
           >
             <div className={classes.appResponsive}>
-              <HeaderLinks />
+              <HeaderLinks drawer />
             </div>
           </Drawer>
         </Hidden>

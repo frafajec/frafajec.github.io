@@ -13,6 +13,7 @@ type SHeaderLinks = (
   readonly marginRight5: TCss;
   readonly navLink: TCss;
   readonly navLinkActive: TCss;
+  readonly navLinkText: TCss;
   readonly notificationNavLink: TCss;
   readonly registerNavLink: TCss;
   readonly tooltip: TCss;
@@ -65,17 +66,8 @@ const headerLinksStyle: SHeaderLinks = (theme: Theme) => ({
       background: 'rgba(200, 200, 200, 0.2)',
       color: 'inherit',
     },
-    borderRadius: '3px',
     color: 'inherit',
-    display: 'inline-flex',
-    fontSize: '12px',
-    fontWeight: 400,
-    lineHeight: '20px',
-    margin: '0px',
     padding: '0.9375rem',
-    position: 'relative',
-    textDecoration: 'none',
-    textTransform: 'uppercase',
     [theme.breakpoints.down('sm')]: {
       '& > span:first-child': {
         justifyContent: 'flex-start',
@@ -90,6 +82,9 @@ const headerLinksStyle: SHeaderLinks = (theme: Theme) => ({
   navLinkActive: {
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
     color: 'inherit',
+  },
+  navLinkText: {
+    margin: '2px 0 0 20px',
   },
   notificationNavLink: {
     color: 'inherit',

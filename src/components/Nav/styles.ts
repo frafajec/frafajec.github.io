@@ -10,6 +10,7 @@ type SHeader = {
   readonly flex: TCss;
   readonly logo: TCss;
   readonly logoScrolled: TCss;
+  readonly mobileMenu: TCss;
   readonly transparent: TCss;
   readonly white: TCss;
 };
@@ -70,11 +71,17 @@ const styles: SHeader = {
     flex: 1,
   },
   logo: {
+    '@media (max-width: 620px)': {
+      marginLeft: '10px',
+    },
     cursor: 'pointer',
     fontSize: '30px',
   },
   logoScrolled: {
     color: variables.cyanColor,
+  },
+  mobileMenu: {
+    fontSize: '1.4em',
   },
   transparent: {
     backgroundColor: 'transparent',
