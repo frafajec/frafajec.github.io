@@ -1,10 +1,16 @@
 import * as React from 'react';
+import { scroller } from 'react-scroll';
+import { partial } from 'lodash';
 
-import { List, ListItem, withStyles, WithStyles } from '@material-ui/core';
+import { withStyles, WithStyles } from '@material-ui/core';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 // @material-ui/icons
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
+import { scrollTo, urls } from 'core/constants';
 import styles from './styles';
 
 // ------------------------------------------------------------
@@ -13,6 +19,10 @@ interface IFooterState {}
 
 // ------------------------------------------------------------
 class Footer extends React.Component<IFooterProps, IFooterState> {
+  scrollTo(location: string) {
+    scroller.scrollTo(location, { smooth: true, duration: 800 });
+  }
+
   render() {
     const { classes } = this.props;
 
@@ -22,51 +32,47 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
           <div className={classes.left}>
             <List className={classes.list}>
               <ListItem className={classes.listItem}>
-                <a
-                  href="https://www.creative-tim.com/"
+                {/* <a
+                  href={urls.LINKEDIN}
                   className={classes.leftLink}
                   target="_blank"
                 >
-                  Creative Tim
-                </a>
+                  Linkedin
+                </a> */}
+                <Button onClick={partial(this.scrollTo, scrollTo.top)} className={classes.leftLink}>
+                  To top
+                </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <a
-                  href="https://www.creative-tim.com/presentation"
+                <Button
+                  onClick={partial(this.scrollTo, scrollTo.profile)}
                   className={classes.leftLink}
-                  target="_blank"
                 >
-                  About us
-                </a>
+                  Profile
+                </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <a
-                  href="http://blog.creative-tim.com/"
+                <Button
+                  onClick={partial(this.scrollTo, scrollTo.contact)}
                   className={classes.leftLink}
-                  target="_blank"
                 >
-                  Blog
-                </a>
+                  Contact
+                </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <a
-                  href="https://www.creative-tim.com/license"
+                <Button
+                  onClick={partial(this.scrollTo, scrollTo.experiences)}
                   className={classes.leftLink}
-                  target="_blank"
                 >
-                  Licenses
-                </a>
+                  Experiences
+                </Button>
               </ListItem>
             </List>
           </div>
           <div className={classes.right}>
-            &copy; {1900 + (new Date() as any).getYear()} , made with{' '}
+            &copy; {1900 + (new Date() as any).getYear()}, made with{' '}
             <FavoriteIcon className={classes.icon} /> by{' '}
-            <a
-              href="https://www.linkedin.com/in/frafajec"
-              className={classes.rightLink}
-              target="_blank"
-            >
+            <a href={urls.LINKEDIN} className={classes.rightLink} target="_blank">
               Filip Rafajec
             </a>{' '}
           </div>

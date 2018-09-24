@@ -4,7 +4,9 @@ import * as React from 'react';
 // import styles from './styles';
 
 // ------------------------------------------------------------
-interface IProfileProps {}
+interface IProfileProps {
+  readonly id: string;
+}
 interface IProfileState {}
 
 // ------------------------------------------------------------

@@ -4,7 +4,9 @@ import * as React from 'react';
 // import styles from './index.scssm';
 
 // ------------------------------------------------------------
-interface IExperiencesProps {}
+interface IExperiencesProps {
+  readonly id: string;
+}
 interface IExperiencesState {}
 
 // ------------------------------------------------------------

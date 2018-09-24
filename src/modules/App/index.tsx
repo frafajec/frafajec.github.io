@@ -11,6 +11,7 @@ import Contact from 'components/Contact';
 import Experiences from 'components/Experiences';
 
 import styles from './styles';
+import { scrollTo } from 'core/constants';
 
 // ------------------------------------------------------------
 interface IAppProps extends WithStyles<typeof styles> {}
@@ -22,13 +23,13 @@ class App extends React.Component<IAppProps, IAppState> {
     const { classes } = this.props;
 
     return (
-      <div className={classes.app}>
+      <div id={scrollTo.top} className={classes.app}>
         <Nav />
         <Parallax />
         <div className={classes.mainSection}>
-          <Profile />
-          <Contact />
-          <Experiences />
+          <Profile id={scrollTo.profile} />
+          <Contact id={scrollTo.contact} />
+          <Experiences id={scrollTo.experiences} />
         </div>
         <Footer />
       </div>
