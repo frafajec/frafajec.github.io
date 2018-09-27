@@ -1,10 +1,13 @@
 import * as React from 'react';
-// import * as cn from 'classnames';
+import { withStyles, WithStyles } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 
-// import styles from './index.scssm';
+import Header from 'components/Header';
+
+import styles from './styles';
 
 // ------------------------------------------------------------
-interface IContactProps {
+interface IContactProps extends WithStyles<typeof styles> {
   readonly id: string;
 }
 interface IContactState {}
@@ -12,8 +15,22 @@ interface IContactState {}
 // ------------------------------------------------------------
 class Contact extends React.Component<IContactProps, IContactState> {
   render() {
-    return null;
+    const { classes, id } = this.props;
+    return (
+      <div id={id} className={classes.container}>
+        <Grid container className={classes.gridContainer}>
+          <Grid item className={classes.gridItem}>
+            <Header
+              title={'Contact'}
+              quote={'Catch me - anytime, anywhere'}
+              withUnderline={false}
+            />
+            body
+          </Grid>
+        </Grid>
+      </div>
+    );
   }
 }
 
-export default Contact;
+export default withStyles(styles)(Contact);
