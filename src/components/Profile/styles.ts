@@ -1,5 +1,5 @@
 import { Theme } from '@material-ui/core';
-// import variables from 'styles/variables';
+import variables from 'styles/variables';
 import { TCss } from 'core/types';
 
 // ------------------------------------------------------------
@@ -105,7 +105,7 @@ const styles: SProfile = (theme: Theme) => ({
     width: '100%',
   },
   title: {
-    color: '#22a39f',
+    color: variables.cyanColor,
     fontSize: '1.8rem',
     fontWeight: 300,
     margin: '20px 0',

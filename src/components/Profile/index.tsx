@@ -17,6 +17,12 @@ interface IProfileState {}
 
 // ------------------------------------------------------------
 class Profile extends React.Component<IProfileProps, IProfileState> {
+  getAge() {
+    const diff = (new Date() as any) - (new Date(1992, 9, 20) as any);
+    const year = 1000 * 60 * 60 * 24 * 365;
+    return Math.floor(diff / year);
+  }
+
   render() {
     const { classes, id } = this.props;
     return (
@@ -52,7 +58,7 @@ class Profile extends React.Component<IProfileProps, IProfileState> {
                       <strong className={classes.detailsHeader}>Name</strong>
                       <span className={classes.detailsDesc}>Filip Rafajec</span>
                       <strong className={classes.detailsHeader}>Age</strong>
-                      <span className={classes.detailsDesc}>26</span>
+                      <span className={classes.detailsDesc}>{this.getAge()}</span>
                       <strong className={classes.detailsHeader}>Location</strong>
                       <span className={classes.detailsDesc}>Graz, Austria</span>
                     </div>

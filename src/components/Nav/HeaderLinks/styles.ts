@@ -12,7 +12,6 @@ type SHeaderLinks = (
   readonly listItemText: TCss;
   readonly marginRight5: TCss;
   readonly navLink: TCss;
-  readonly navLinkActive: TCss;
   readonly navLinkText: TCss;
   readonly notificationNavLink: TCss;
   readonly registerNavLink: TCss;
@@ -78,10 +77,6 @@ const headerLinksStyle: SHeaderLinks = (theme: Theme) => ({
       textAlign: 'left',
       width: 'calc(100% - 30px)',
     },
-  },
-  navLinkActive: {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    color: 'inherit',
   },
   navLinkText: {
     margin: '2px 0 0 20px',
