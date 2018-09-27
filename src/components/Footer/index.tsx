@@ -19,8 +19,15 @@ interface IFooterState {}
 
 // ------------------------------------------------------------
 class Footer extends React.Component<IFooterProps, IFooterState> {
-  scrollTo(location: string) {
-    scroller.scrollTo(location, { smooth: true, duration: 800 });
+  navbarHeight: number = -77;
+
+  scrollTo(location: string, offset: number = 0) {
+    const options = { smooth: true, duration: 800, offset };
+    if (!!offset) {
+      // bug in scroller, needs to be removed otherwise no animation is triggered
+      delete options.offset;
+    }
+    scroller.scrollTo(location, options);
   }
 
   render() {
@@ -45,7 +52,7 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
               </ListItem>
               <ListItem className={classes.listItem}>
                 <Button
-                  onClick={partial(this.scrollTo, scrollTo.profile)}
+                  onClick={partial(this.scrollTo, scrollTo.profile, this.navbarHeight)}
                   className={classes.leftLink}
                 >
                   Profile
@@ -53,7 +60,7 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
               </ListItem>
               <ListItem className={classes.listItem}>
                 <Button
-                  onClick={partial(this.scrollTo, scrollTo.contact)}
+                  onClick={partial(this.scrollTo, scrollTo.contact, this.navbarHeight)}
                   className={classes.leftLink}
                 >
                   Contact
@@ -61,7 +68,7 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
               </ListItem>
               <ListItem className={classes.listItem}>
                 <Button
-                  onClick={partial(this.scrollTo, scrollTo.experiences)}
+                  onClick={partial(this.scrollTo, scrollTo.experiences, this.navbarHeight)}
                   className={classes.leftLink}
                 >
                   Experiences
