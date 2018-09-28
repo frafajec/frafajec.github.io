@@ -13,10 +13,40 @@ import styles from './styles';
 interface IProfileProps extends WithStyles<typeof styles> {
   readonly id: string;
 }
-interface IProfileState {}
+interface IProfileState {
+  readonly imageTransform: string;
+}
 
 // ------------------------------------------------------------
 class Profile extends React.Component<IProfileProps, IProfileState> {
+  constructor(props: IProfileProps) {
+    super(props);
+
+    this.state = {
+      imageTransform: '',
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.resetTransform);
+    this.resetTransform();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.resetTransform);
+  }
+
+  resetTransform = () => {
+    const { top } = document.getElementById('profile-picture')!.getBoundingClientRect();
+    const scroll = window.pageYOffset - (top + window.innerHeight / 4); // - top + 40; // position where it should start moving
+    const translate = (Math.min(Math.max(scroll, -300), 300) * 0.15) / 3;
+
+    // don't parallax on low res, it is different layout
+    this.setState({
+      imageTransform: window.innerWidth < 768 ? '' : 'translate3d(0,' + translate + 'px,0)',
+    });
+  };
+
   getAge() {
     const diff = (new Date() as any) - (new Date(1992, 9, 20) as any);
     const year = 1000 * 60 * 60 * 24 * 365;
@@ -25,6 +55,9 @@ class Profile extends React.Component<IProfileProps, IProfileState> {
 
   render() {
     const { classes, id } = this.props;
+    const { imageTransform } = this.state;
+    const imgStyle = { transform: imageTransform };
+
     return (
       <div id={id} className={classes.container}>
         <Grid container className={classes.gridContainer}>
@@ -63,7 +96,13 @@ class Profile extends React.Component<IProfileProps, IProfileState> {
                       <span className={classes.detailsDesc}>Graz, Austria</span>
                     </div>
                   </Hidden>
-                  <img className={classes.image} src={personalImage} alt="personal-picture" />
+                  <img
+                    id="profile-picture"
+                    className={classes.image}
+                    style={imgStyle}
+                    src={personalImage}
+                    alt="personal-picture"
+                  />
                 </div>
               </Grid>
             </Grid>

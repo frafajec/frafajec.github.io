@@ -93,6 +93,7 @@ const styles: SProfile = (theme: Theme) => ({
     borderRadius: '150px',
     height: '250px',
     marginLeft: '25px',
+    transition: 'all 150ms ease 0s',
     width: '187px',
     [theme.breakpoints.down('sm')]: {
       marginLeft: 0,

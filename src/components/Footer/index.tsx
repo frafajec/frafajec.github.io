@@ -23,7 +23,7 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
 
   scrollTo(location: string, offset: number = 0) {
     const options = { smooth: true, duration: 800, offset };
-    if (!!offset) {
+    if (!offset) {
       // bug in scroller, needs to be removed otherwise no animation is triggered
       delete options.offset;
     }
@@ -46,7 +46,10 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
                 >
                   Linkedin
                 </a> */}
-                <Button onClick={partial(this.scrollTo, scrollTo.top)} className={classes.leftLink}>
+                <Button
+                  onClick={partial(this.scrollTo, scrollTo.top, undefined)}
+                  className={classes.leftLink}
+                >
                   To top
                 </Button>
               </ListItem>
