@@ -36,7 +36,7 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
     return (
       <footer className={classes.footer}>
         <div className={classes.container}>
-          <div className={classes.left}>
+          <div>
             <List className={classes.list}>
               <ListItem className={classes.listItem}>
                 {/* <a
@@ -79,7 +79,7 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
               </ListItem>
             </List>
           </div>
-          <div className={classes.right}>
+          <div>
             &copy; {1900 + (new Date() as any).getYear()}, made with{' '}
             <FavoriteIcon className={classes.icon} /> by{' '}
             <a href={urls.LINKEDIN} className={classes.rightLink} target="_blank">

@@ -1,23 +1,31 @@
+import { Theme } from '@material-ui/core';
 import variables from 'styles/variables';
 import { TCss } from 'core/types';
 
 // ------------------------------------------------------------
-type SFooter = {
+type SFooter = (
+  theme: Theme
+) => {
   readonly container: TCss;
   readonly footer: TCss;
   readonly icon: TCss;
-  readonly left: TCss;
   readonly leftLink: TCss;
   readonly list: TCss;
   readonly listItem: TCss;
-  readonly right: TCss;
   readonly rightLink: TCss;
 };
 
 // ------------------------------------------------------------
-const styles: SFooter = {
+const styles: SFooter = (theme: Theme) => ({
   container: {
     ...variables.container,
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'space-between',
+    padding: '10px 15px',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
   },
   footer: {
     display: 'flex',
@@ -31,10 +39,6 @@ const styles: SFooter = {
     position: 'relative',
     top: '3px',
     width: '18px',
-  },
-  left: {
-    display: 'block',
-    float: 'left',
   },
   leftLink: {
     '&:hover, &:active': {
@@ -60,16 +64,11 @@ const styles: SFooter = {
     padding: '0px',
     width: 'auto',
   },
-  right: {
-    float: 'right',
-    margin: 0,
-    padding: '15px 0',
-  },
   rightLink: {
     backgroundColor: 'transparent',
     color: variables.cyanColor,
     textDecoration: 'none',
   },
-};
+});
 
 export default styles;
