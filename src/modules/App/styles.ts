@@ -1,5 +1,5 @@
-// import variables from 'styles/variables';
 import { TCss } from 'core/types';
+import variables from 'styles/variables';
 
 // ------------------------------------------------------------
 type SApp = {
@@ -14,7 +14,7 @@ const styles: SApp = {
     textAlign: 'left',
   },
   mainSection: {
-    background: '#FFFFFF',
+    background: variables.colors.white,
     borderRadius: '6px',
     boxShadow:
       '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)',

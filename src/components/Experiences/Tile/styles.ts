@@ -1,6 +1,6 @@
 import { Theme } from '@material-ui/core';
-import variables from 'styles/variables';
 import { TCss } from 'core/types';
+import variables from 'styles/variables';
 
 // ------------------------------------------------------------
 type STile = (
@@ -24,7 +24,7 @@ type STile = (
 const styles: STile = (theme: Theme) => ({
   additional: {
     alignItems: 'center',
-    color: variables.cyanColor,
+    color: variables.colors.green,
     display: 'flex',
     flexDirection: 'row',
     marginTop: '10px',
@@ -46,7 +46,6 @@ const styles: STile = (theme: Theme) => ({
   },
   icons: {
     fontSize: '1.5rem',
-    position: 'relative',
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.3rem',
     },
@@ -73,7 +72,7 @@ const styles: STile = (theme: Theme) => ({
     },
     [theme.breakpoints.down('xs')]: {
       '&:after': {
-        borderBottom: '1px solid #727878',
+        borderBottom: `1px solid ${variables.colors.grey}`,
         content: '""',
         margin: '30px auto 0',
         opacity: 0.2,

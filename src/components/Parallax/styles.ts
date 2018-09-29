@@ -1,5 +1,5 @@
-import variables from 'styles/variables';
 import { TCss } from 'core/types';
+import variables from 'styles/variables';
 
 // ------------------------------------------------------------
 type SParallax = {
@@ -19,7 +19,7 @@ type SParallax = {
 // ------------------------------------------------------------
 const styles: SParallax = {
   brand: {
-    color: '#FFFFFF',
+    color: variables.colors.white,
     textAlign: 'center',
     transition: 'transform 1200ms ease-out',
   },
@@ -52,7 +52,7 @@ const styles: SParallax = {
     width: '100vw',
   },
   line: {
-    borderTop: '1px solid #FFFF',
+    borderTop: `1px solid ${variables.colors.white}`,
     margin: '0 auto',
     width: '75%',
   },

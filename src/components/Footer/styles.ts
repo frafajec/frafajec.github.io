@@ -1,6 +1,6 @@
 import { Theme } from '@material-ui/core';
-import variables from 'styles/variables';
 import { TCss } from 'core/types';
+import variables from 'styles/variables';
 
 // ------------------------------------------------------------
 type SFooter = (
@@ -42,7 +42,7 @@ const styles: SFooter = (theme: Theme) => ({
   },
   leftLink: {
     '&:hover, &:active': {
-      color: variables.cyanColor,
+      color: variables.colors.green,
     },
     borderRadius: '3px',
     color: 'inherit',
@@ -66,7 +66,7 @@ const styles: SFooter = (theme: Theme) => ({
   },
   rightLink: {
     backgroundColor: 'transparent',
-    color: variables.cyanColor,
+    color: variables.colors.green,
     textDecoration: 'none',
   },
 });

@@ -1,6 +1,6 @@
 import { Theme } from '@material-ui/core';
-import variables from 'styles/variables';
 import { TCss } from 'core/types';
+import variables from 'styles/variables';
 
 // ------------------------------------------------------------
 type SProfile = (
@@ -35,7 +35,7 @@ const styles: SProfile = (theme: Theme) => ({
     padding: '20px 0',
   },
   description: {
-    color: '#434242',
+    color: variables.colors.greyDark,
     fontSize: '0.9rem',
     fontStyle: 'italic',
     lineHeight: '20px',
@@ -56,8 +56,9 @@ const styles: SProfile = (theme: Theme) => ({
     marginBottom: '10px',
   },
   detailsHeader: {
-    color: '#333',
+    color: variables.colors.green,
     fontSize: '1.1rem',
+    fontWeight: 300,
     marginBottom: '2px',
   },
   gridContainer: {
@@ -106,7 +107,7 @@ const styles: SProfile = (theme: Theme) => ({
     width: '100%',
   },
   title: {
-    color: variables.cyanColor,
+    color: variables.colors.green,
     fontSize: '1.8rem',
     fontWeight: 300,
     margin: '20px 0',

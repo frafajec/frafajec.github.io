@@ -1,5 +1,6 @@
 import { Theme } from '@material-ui/core';
 import { TCss } from 'core/types';
+import variables from 'styles/variables';
 
 // ------------------------------------------------------------
 type SExperiences = (
@@ -19,7 +20,7 @@ const styles: SExperiences = (theme: Theme) => ({
   delimiter: {
     '&::before': {
       alignItems: 'center',
-      color: '#727878',
+      color: variables.colors.grey,
       content: '"..."',
       display: 'flex',
       fontSize: '4rem',
@@ -33,7 +34,6 @@ const styles: SExperiences = (theme: Theme) => ({
   },
   gridContainer: {
     padding: '0 40px',
-    width: 'auto',
     [theme.breakpoints.down('sm')]: {
       padding: '0 10px',
     },
@@ -42,11 +42,7 @@ const styles: SExperiences = (theme: Theme) => ({
     },
   },
   gridItem: {
-    flexBasis: 'auto',
-    minHeight: '1px',
-    paddingLeft: '15px',
-    paddingRight: '15px',
-    position: 'relative',
+    padding: '0 15px',
     width: '100%',
   },
 });

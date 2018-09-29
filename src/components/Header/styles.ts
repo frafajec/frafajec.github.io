@@ -1,6 +1,6 @@
 import { Theme } from '@material-ui/core';
-// import variables from 'styles/variables';
 import { TCss } from 'core/types';
+import variables from 'styles/variables';
 
 // ------------------------------------------------------------
 type SHeader = (
@@ -16,7 +16,7 @@ type SHeader = (
 const styles: SHeader = (theme: Theme) => ({
   container: {},
   quote: {
-    color: '#434242',
+    color: variables.colors.greyDark,
     fontSize: '1.3rem',
     fontStyle: 'italic',
     fontWeight: 300,
@@ -28,7 +28,7 @@ const styles: SHeader = (theme: Theme) => ({
     },
   },
   title: {
-    color: '#22a39f',
+    color: variables.colors.green,
     fontSize: '3.4rem',
     fontWeight: 300,
     margin: '10px 0 5px',
@@ -39,7 +39,7 @@ const styles: SHeader = (theme: Theme) => ({
   },
   underline: {
     border: 0,
-    borderTop: '1px solid #727878',
+    borderTop: `1px solid ${variables.colors.grey}`,
     margin: '40px auto',
     opacity: 0.2,
     width: '75%',

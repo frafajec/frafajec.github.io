@@ -1,6 +1,6 @@
 import { Theme } from '@material-ui/core';
-import variables from 'styles/variables';
 import { TCss } from 'core/types';
+import variables from 'styles/variables';
 
 // ------------------------------------------------------------
 type SSection = (
@@ -24,7 +24,7 @@ const styles: SSection = (theme: Theme) => ({
     },
   },
   title: {
-    color: variables.cyanColor,
+    color: variables.colors.green,
     fontSize: '2.1rem',
     fontWeight: 300,
     marginBottom: '5px',

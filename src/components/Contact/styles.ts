@@ -1,6 +1,6 @@
 import { Theme } from '@material-ui/core';
-import variables from 'styles/variables';
 import { TCss } from 'core/types';
+import variables from 'styles/variables';
 
 // ------------------------------------------------------------
 type SContact = (
@@ -18,7 +18,7 @@ type SContact = (
 // ------------------------------------------------------------
 const styles: SContact = (theme: Theme) => ({
   container: {
-    background: '#EEEEEE',
+    background: variables.colors.white,
     padding: '20px 0',
   },
   gridContainer: {
@@ -45,8 +45,8 @@ const styles: SContact = (theme: Theme) => ({
   },
   navLink: {
     '&:hover,&:focus': {
-      background: 'rgba(200, 200, 200, 0.2)',
-      color: variables.cyanColor,
+      background: variables.colors.shadow,
+      color: variables.colors.green,
     },
     color: 'inherit',
     padding: '0.9375rem',

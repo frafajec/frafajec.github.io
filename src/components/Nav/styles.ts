@@ -1,5 +1,5 @@
-import variables from 'styles/variables';
 import { TCss } from 'core/types';
+import variables from 'styles/variables';
 
 // ------------------------------------------------------------
 type SHeader = {
@@ -46,7 +46,6 @@ const styles: SHeader = {
   },
   drawerPaper: {
     ...variables.boxShadow,
-    ...variables.transition,
     border: 'none',
     borderTop: 'none',
     bottom: '0',
@@ -61,11 +60,8 @@ const styles: SHeader = {
     right: '0',
     textAlign: 'left',
     top: '0',
-    transitionDuration: '.2s, .2s, .35s',
-    transitionProperty: 'top, bottom, width',
-    transitionTimingFunction: 'linear, linear, ease',
     visibility: 'visible',
-    width: variables.drawerWidth,
+    width: 260,
   },
   flex: {
     flex: 1,
@@ -75,10 +71,10 @@ const styles: SHeader = {
       marginLeft: '10px',
     },
     cursor: 'pointer',
-    fontSize: '30px',
+    fontSize: '1.9rem',
   },
   logoScrolled: {
-    color: variables.cyanColor,
+    color: variables.colors.green,
   },
   mobileMenu: {
     fontSize: '1.4em',
@@ -86,13 +82,13 @@ const styles: SHeader = {
   transparent: {
     backgroundColor: 'transparent',
     boxShadow: 'none',
-    color: '#FFFFFF',
+    color: variables.colors.white,
     paddingTop: '25px',
   },
   white: {
     backgroundColor: '#fff',
     border: '0',
-    borderBottom: `2px solid ${variables.cyanColor}`,
+    borderBottom: `2px solid ${variables.colors.green}`,
     boxShadow: '0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)',
     color: '#555',
   },
