@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { scroller } from 'react-scroll';
-import { partial } from 'lodash';
 
 import { withStyles, WithStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
@@ -30,6 +29,11 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
     scroller.scrollTo(location, options);
   }
 
+  scrollToTop = () => this.scrollTo(scrollTo.top, undefined);
+  scrollToProfile = () => this.scrollTo(scrollTo.profile, this.navbarHeight);
+  scrollToContact = () => this.scrollTo(scrollTo.contact, this.navbarHeight);
+  scrollToExperiences = () => this.scrollTo(scrollTo.experiences, this.navbarHeight);
+
   render() {
     const { classes } = this.props;
 
@@ -46,34 +50,22 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
                 >
                   Linkedin
                 </a> */}
-                <Button
-                  onClick={partial(this.scrollTo, scrollTo.top, undefined)}
-                  className={classes.leftLink}
-                >
+                <Button onClick={this.scrollToTop} className={classes.leftLink}>
                   To top
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <Button
-                  onClick={partial(this.scrollTo, scrollTo.profile, this.navbarHeight)}
-                  className={classes.leftLink}
-                >
+                <Button onClick={this.scrollToProfile} className={classes.leftLink}>
                   Profile
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <Button
-                  onClick={partial(this.scrollTo, scrollTo.contact, this.navbarHeight)}
-                  className={classes.leftLink}
-                >
+                <Button onClick={this.scrollToContact} className={classes.leftLink}>
                   Contact
                 </Button>
               </ListItem>
               <ListItem className={classes.listItem}>
-                <Button
-                  onClick={partial(this.scrollTo, scrollTo.experiences, this.navbarHeight)}
-                  className={classes.leftLink}
-                >
+                <Button onClick={this.scrollToExperiences} className={classes.leftLink}>
                   Experiences
                 </Button>
               </ListItem>
