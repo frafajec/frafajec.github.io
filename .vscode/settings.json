@@ -4,6 +4,7 @@
   "prettier.singleQuote": true,
   "prettier.cssEnable": ["scss"],
   "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
   "editor.tabCompletion": true,
   "cSpell.words": ["Ficon", "Informatics", "deployable"]
 }
