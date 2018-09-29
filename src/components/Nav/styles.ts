@@ -77,7 +77,9 @@ const styles: SHeader = {
     color: variables.colors.green,
   },
   mobileMenu: {
-    fontSize: '1.4em',
+    fontSize: '1.5rem',
+    height: '1em',
+    width: '1em',
   },
   transparent: {
     backgroundColor: 'transparent',

@@ -8,9 +8,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
 
-// @material-ui/icons
-import Menu from '@material-ui/icons/Menu';
-
 import HeaderLinks from './HeaderLinks';
 
 import styles from './styles';
@@ -76,7 +73,7 @@ class Header extends React.Component<IHeaderProps, IHeaderState> {
 
           <Hidden mdUp>
             <IconButton color="inherit" aria-label="open drawer" onClick={this.handleDrawerToggle}>
-              <Menu className={classes.mobileMenu} />
+              <i className={classes.mobileMenu + ' fas fa-bars'} />
             </IconButton>
           </Hidden>
         </Toolbar>

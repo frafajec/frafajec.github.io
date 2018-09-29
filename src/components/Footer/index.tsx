@@ -6,9 +6,6 @@ import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 
-// @material-ui/icons
-import FavoriteIcon from '@material-ui/icons/Favorite';
-
 import { scrollTo, urls } from 'core/constants';
 import styles from './styles';
 
@@ -73,7 +70,7 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
           </div>
           <div>
             &copy; {1900 + (new Date() as any).getYear()}, made with{' '}
-            <FavoriteIcon className={classes.icon} /> by{' '}
+            <i className={classes.icon + ' fas fa-heart'} /> by{' '}
             <a href={urls.LINKEDIN} className={classes.rightLink} target="_blank">
               Filip Rafajec
             </a>{' '}

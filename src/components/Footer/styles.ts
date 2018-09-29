@@ -37,7 +37,6 @@ const styles: SFooter = (theme: Theme) => ({
   icon: {
     height: '18px',
     position: 'relative',
-    top: '3px',
     width: '18px',
   },
   leftLink: {
