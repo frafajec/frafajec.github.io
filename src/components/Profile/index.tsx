@@ -28,12 +28,13 @@ class Profile extends React.Component<IProfileProps, IProfileState> {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.resetTransform);
-    this.resetTransform();
+    // ignored for now, might come back later
+    // window.addEventListener('scroll', this.resetTransform);
+    // this.resetTransform();
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.resetTransform);
+    // window.removeEventListener('scroll', this.resetTransform);
   }
 
   resetTransform = () => {
