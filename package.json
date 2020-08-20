@@ -1,22 +1,31 @@
 {
-  "name": "ts-app",
-  "version": "0.1.0",
+  "name": "frafajec.github.io",
+  "version": "2.0.0",
   "private": true,
+  "homepage": "http://frafajec.github.io",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
+    "@material-ui/core": "^4.11.0",
+    "classnames": "^2.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
-    "typescript": "~3.7.2"
+    "react-scroll": "^1.7.10",
+    "typescript": "~3.9.7"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.3",
+    "@testing-library/react": "^10.4.8",
+    "@testing-library/user-event": "^12.1.1",
+    "@types/classnames": "^2.2.6",
+    "@types/jest": "^26.0.10",
+    "@types/material-ui": "^0.21.8",
+    "@types/node": "^14.6.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-scroll": "^1.5.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
