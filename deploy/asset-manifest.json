@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8a09b50c.chunk.css",
+    "main.js": "/static/js/main.ca2df85d.chunk.js",
+    "main.js.map": "/static/js/main.ca2df85d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9ea3b4a3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9ea3b4a3.js.map",
+    "static/js/2.80646f6d.chunk.js": "/static/js/2.80646f6d.chunk.js",
+    "static/js/2.80646f6d.chunk.js.map": "/static/js/2.80646f6d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f47ce57c690ab0dd65be2feffb343d9c.js": "/precache-manifest.f47ce57c690ab0dd65be2feffb343d9c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.8a09b50c.chunk.css.map": "/static/css/main.8a09b50c.chunk.css.map",
+    "static/js/2.80646f6d.chunk.js.LICENSE.txt": "/static/js/2.80646f6d.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/fa-solid-900.84f351b3.woff2",
+    "static/media/personal-image.jpg": "/static/media/personal-image.f92ba613.jpg",
+    "static/media/ws1024.jpg": "/static/media/ws1024.b282a40a.jpg",
+    "static/media/ws1280.jpg": "/static/media/ws1280.36b933e3.jpg",
+    "static/media/ws1366.jpg": "/static/media/ws1366.1c4cda99.jpg",
+    "static/media/ws1920.jpg": "/static/media/ws1920.c6332d58.jpg",
+    "static/media/ws2600.jpg": "/static/media/ws2600.c7eee6d1.jpg",
+    "static/media/ws320.jpg": "/static/media/ws320.fd61eba5.jpg",
+    "static/media/ws480.jpg": "/static/media/ws480.59dc27f1.jpg",
+    "static/media/ws768.jpg": "/static/media/ws768.f6713697.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ea3b4a3.js",
+    "static/js/2.80646f6d.chunk.js",
+    "static/css/main.8a09b50c.chunk.css",
+    "static/js/main.ca2df85d.chunk.js"
+  ]
+}
