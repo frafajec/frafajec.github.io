@@ -71,7 +71,6 @@ class Header extends React.Component<IHeaderProps, IHeaderState> {
       <AppBar className={classes.appBar}>
         <Toolbar className={classes.container}>
           <div className={classes.flex} onClick={this.onLogoClick}>
-            {/* <i className={classes.logo + ' fab fa-github-alt'} /> */}
             <img src={icon} alt="home" className={classes.logo} />
           </div>
 

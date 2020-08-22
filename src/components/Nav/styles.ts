@@ -65,6 +65,7 @@ const styles = createStyles({
   },
   drawerPaper: {
     width: '90%',
+    background: variables.colors.background,
   },
 });
 

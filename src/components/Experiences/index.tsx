@@ -25,13 +25,14 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
             <Header
               title={'Experiences'}
               quote={'“Failure is the condiment that gives success its flavor.” ― Truman Capote'}
+              withUnderline={false}
             />
             <Section title="Work">
               <Tile
                 name="Rockpaper"
                 date="2018 - Present"
                 title="Co-Founder & CTO"
-                desc="Creating a startup world as a technical person"
+                desc="Creating a startup world with all its charms!"
                 location="Seattle, US"
                 url="https://www.therockpaper.com"
                 urlText="therockpaper.com"
@@ -40,7 +41,7 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
                 name="Parkside"
                 date="2016 - Present"
                 title="Web Developer & Team Lead"
-                desc="Leading team of engineers through cutting-edge web projects and challenges."
+                desc="Leading teams of engineers across different projects with different clients through cutting-edge projects and challenges."
                 location="Graz, Austria"
                 url="https://www.parkside.at"
                 urlText="parkside.at"
@@ -49,7 +50,7 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
                 name="Info3"
                 date="2014 - 2016"
                 title="Full-Stack Developer"
-                desc="Worked with ERP systems and developing Web apps."
+                desc="Working on developing customized ERP systems and Web apps tailored to clients needs."
                 location="Varazdin, Croatia"
                 url="http://www.info3.hr"
                 urlText="info3.hr"
@@ -58,7 +59,7 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
                 name="Freelance"
                 date="2011 - Present"
                 title="Web projects"
-                desc="Working on lean project for money or glory!"
+                desc="Working on lean projects for money or glory!"
                 location="Worldwide"
               />
             </Section>
