@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Check if current branch is master
 # Proceed to build, remove!
@@ -24,7 +24,8 @@ then
     echo ""
     echo "-- Commit deploy --"
     git add .
-    git commit -am "Deploy commit"
+    git_update_hash=`git rev-parse --short HEAD`
+    git commit -am "Deploy latest develop ${git_update_hash}"
     git push origin develop
 
     echo ""
@@ -40,7 +41,8 @@ then
     echo ""
     echo "-- Commiting --"
     git add .
-    git commit -am "Deploy commit"
+    git_develop_hash=`git rev-parse --short develop`
+    git commit -am "Deploy develop ${git_develop_hash}"
     git push origin master
 
 else
