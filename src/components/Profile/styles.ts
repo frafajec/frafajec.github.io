@@ -22,30 +22,14 @@ const styles = (theme: Theme) =>
       },
     },
     description: {
-      fontSize: '0.9rem',
+      fontSize: theme.typography.pxToRem(14),
       fontStyle: 'italic',
+      fontWeight: 300,
       lineHeight: '20px',
       marginBottom: '25px',
       marginTop: 0,
       padding: '30px 0 0',
       textAlign: 'left',
-    },
-    details: {
-      display: 'flex',
-      flexFlow: 'column',
-      margin: '5px 15px',
-    },
-    detailsDesc: {
-      fontSize: '1rem',
-      fontStyle: 'italic',
-      lineHeight: '20px',
-      marginBottom: '10px',
-    },
-    detailsHeader: {
-      color: variables.colors.blue,
-      fontSize: '1.1rem',
-      fontWeight: 300,
-      marginBottom: '2px',
     },
     gridContainer: {
       padding: '0 40px',
@@ -76,25 +60,9 @@ const styles = (theme: Theme) =>
         width: '100%',
       },
     },
-    image: {
-      borderRadius: '150px',
-      height: '250px',
-      marginLeft: '25px',
-      transition: 'all 150ms ease 0s',
-      width: '187px',
-      [theme.breakpoints.down('sm')]: {
-        marginLeft: 0,
-      },
-    },
-    overview: {
-      alignItems: 'center',
-      display: 'flex',
-      justifyContent: 'center',
-      width: '100%',
-    },
     title: {
       color: variables.colors.blue,
-      fontSize: '1.8rem',
+      fontSize: theme.typography.pxToRem(30),
       fontWeight: 300,
       margin: '20px 0 0',
 

@@ -17,6 +17,7 @@ const styles = (theme: Theme) =>
     footer: {
       display: 'flex',
       padding: '0.9375rem 0',
+      marginBottom: 40,
       position: 'relative',
       textAlign: 'center',
       zIndex: 2,
@@ -35,7 +36,7 @@ const styles = (theme: Theme) =>
       display: 'block',
       fontSize: '12px',
       fontWeight: 500,
-      padding: '0.9375rem',
+      padding: theme.typography.pxToRem(14),
       position: 'relative',
       textDecoration: 'none',
       textTransform: 'uppercase',

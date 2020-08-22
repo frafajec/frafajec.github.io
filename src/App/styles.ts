@@ -25,7 +25,7 @@ const styles = (theme: any) =>
     underline: {
       border: 0,
       borderTop: `1px solid ${variables.colors.white}`,
-      margin: '50px auto',
+      margin: '30px auto',
       opacity: 0.2,
       width: '75%',
     },

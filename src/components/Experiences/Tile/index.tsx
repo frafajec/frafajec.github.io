@@ -43,7 +43,13 @@ class Tile extends React.Component<ITileProps, ITileState> {
     const { classes, url, urlText } = this.props;
 
     return (
-      <Button href={url!} target="_blank" onClick={this.onUrlClick} className={classes.url}>
+      <Button
+        href={url!}
+        target="_blank"
+        rel="noreferrer"
+        onClick={this.onUrlClick}
+        className={classes.url}
+      >
         <i className={classes.icons + ' fas fa-link'} />
         <span className={classes.urlText}>{urlText || url}</span>
       </Button>

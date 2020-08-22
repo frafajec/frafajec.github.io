@@ -31,12 +31,13 @@ const styles = (theme: Theme) =>
       position: 'relative',
     },
     navLink: {
+      color: 'inherit',
+      padding: theme.typography.pxToRem(14),
+
       '&:hover,&:focus': {
         background: variables.colors.shadow,
         color: variables.colors.blue,
       },
-      color: 'inherit',
-      padding: '0.9375rem',
       [theme.breakpoints.down('sm')]: {
         '& > span:first-child': {
           justifyContent: 'flex-start',

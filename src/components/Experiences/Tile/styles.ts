@@ -12,7 +12,7 @@ const styles = (theme: Theme) =>
       marginTop: '10px',
     },
     date: {
-      fontSize: '0.9rem',
+      fontSize: theme.typography.pxToRem(14),
       marginBottom: '10px',
       minWidth: '76px',
       [theme.breakpoints.down('sm')]: {
@@ -20,16 +20,18 @@ const styles = (theme: Theme) =>
       },
     },
     desc: {
-      fontSize: '0.9rem',
+      fontSize: theme.typography.pxToRem(14),
+      fontWeight: 300,
       marginBottom: '10px',
+
       [theme.breakpoints.down('sm')]: {
         margin: 0,
       },
     },
     icons: {
-      fontSize: '1.5rem',
+      fontSize: theme.typography.pxToRem(24),
       [theme.breakpoints.down('sm')]: {
-        fontSize: '1.3rem',
+        fontSize: theme.typography.pxToRem(21),
       },
     },
     location: {
@@ -37,7 +39,7 @@ const styles = (theme: Theme) =>
       display: 'flex',
     },
     name: {
-      fontSize: '1.1rem',
+      fontSize: theme.typography.pxToRem(17),
       fontWeight: 700,
       margin: '10px 0',
       [theme.breakpoints.down('sm')]: {
@@ -82,14 +84,14 @@ const styles = (theme: Theme) =>
       paddingLeft: '20px',
       width: '220px',
       [theme.breakpoints.down('sm')]: {
-        alignItems: 'center',
+        alignItems: 'top',
         flexDirection: 'row',
         paddingLeft: 0,
         width: 'auto',
       },
     },
     title: {
-      fontSize: '1.1rem',
+      fontSize: theme.typography.pxToRem(17),
       fontWeight: 500,
       margin: '10px 0',
     },
@@ -101,7 +103,7 @@ const styles = (theme: Theme) =>
       margin: '2px 0 0 10px',
       textTransform: 'initial',
       [theme.breakpoints.down('sm')]: {
-        fontSize: '0.9rem',
+        fontSize: theme.typography.pxToRem(14),
       },
     },
   });

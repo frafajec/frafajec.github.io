@@ -63,7 +63,7 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
                 location="Worldwide"
               />
             </Section>
-            <hr className={classes.delimiter} />
+            {/* <hr className={classes.delimiter} />
             <Section title="Education">
               <Tile
                 name="Technical University Graz"
@@ -90,7 +90,7 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
                 desc="Foundation for science and IT background."
                 location="Varazdin, Croatia"
               />
-            </Section>
+            </Section> */}
           </Grid>
         </Grid>
       </div>

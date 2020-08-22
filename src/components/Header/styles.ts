@@ -6,24 +6,24 @@ const styles = (theme: Theme) =>
   createStyles({
     container: {},
     quote: {
-      fontSize: '1.3rem',
+      fontSize: theme.typography.pxToRem(21),
       fontStyle: 'italic',
       fontWeight: 300,
       marginBottom: '25px',
       marginTop: 0,
       textAlign: 'center',
       [theme.breakpoints.down('xs')]: {
-        fontSize: '1.1rem',
+        fontSize: theme.typography.pxToRem(17),
       },
     },
     title: {
       color: variables.colors.blue,
-      fontSize: '3.4rem',
+      fontSize: theme.typography.pxToRem(54),
       fontWeight: 300,
       margin: '10px 0 5px',
       textAlign: 'center',
       [theme.breakpoints.down('xs')]: {
-        fontSize: '2.9rem',
+        fontSize: theme.typography.pxToRem(46),
       },
     },
     underline: {

@@ -33,7 +33,7 @@ const boxShadow = {
 };
 
 const colors = {
-  blue: '#00acc1',
+  blue: '#00CBE6',
   // green: '#22a39f',
   // grey: '#727878',
   // greyDark: '#434242',

@@ -27,9 +27,9 @@ class App extends React.Component<IAppProps, IAppState> {
         <Nav />
         <Parallax />
         <div className={classes.mainSection}>
-          <Contact id={scrollTo.contact} />
-          <hr className={classes.underline} />
           <Profile id={scrollTo.profile} />
+          <hr className={classes.underline} />
+          <Contact id={scrollTo.contact} />
           <hr className={classes.underline} />
           <Experiences id={scrollTo.experiences} />
         </div>

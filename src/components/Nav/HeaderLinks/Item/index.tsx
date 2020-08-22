@@ -31,6 +31,7 @@ function Item({ ...props }: IProps) {
       >
         <Button
           href={values.href}
+          rel="noreferrer"
           target="_blank"
           onClick={values.onClick}
           className={classes.navLink}

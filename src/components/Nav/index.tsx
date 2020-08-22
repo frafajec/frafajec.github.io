@@ -7,8 +7,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
+import { scroller } from 'react-scroll';
 
 import GA from 'core/ga';
+import { scrollTo } from 'core/constants';
 import HeaderLinks from './HeaderLinks';
 import icon from 'assets/icons/icon.png';
 
@@ -41,6 +43,7 @@ class Header extends React.Component<IHeaderProps, IHeaderState> {
 
   onLogoClick() {
     GA.click('logo');
+    scroller.scrollTo(scrollTo.top, { smooth: true, duration: 800 });
   }
 
   handleDrawerToggle = () => {

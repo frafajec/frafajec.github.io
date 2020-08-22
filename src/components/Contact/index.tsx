@@ -1,14 +1,14 @@
-import * as React from "react";
-import { withStyles, WithStyles } from "@material-ui/core";
+import * as React from 'react';
+import { withStyles, WithStyles } from '@material-ui/core';
 
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 
-import { urls } from "core/constants";
-import GA from "core/ga";
-import Header from "components/Header";
+import { urls } from 'core/constants';
+import GA from 'core/ga';
+import Header from 'components/Header';
 
-import styles from "./styles";
+import styles from './styles';
 
 // ------------------------------------------------------------
 interface IContactProps extends WithStyles<typeof styles> {
@@ -25,20 +25,19 @@ class Contact extends React.Component<IContactProps, IContactState> {
         <Grid container className={classes.gridContainer}>
           <Grid item className={classes.gridItem}>
             <Header
-              title={"Contact"}
-              quote={
-                "“Failure is the condiment that gives success its flavor.” ― Truman Capote"
-              }
+              title={'Contact'}
+              quote={'“Failure is the condiment that gives success its flavor.” ― Truman Capote'}
               withUnderline={false}
             />
             <div className={classes.row}>
               <Button
                 href={urls.LINKEDIN}
+                rel="noreferrer"
                 target="_blank"
                 onClick={GA.openLinkedin}
                 className={classes.navLink}
               >
-                <i className={classes.icons + " fab fa-linkedin"} />
+                <i className={classes.icons + ' fab fa-linkedin'} />
                 <span className={classes.navLinkText}>{urls.LINKEDIN}</span>
               </Button>
               <Button
@@ -46,16 +45,17 @@ class Contact extends React.Component<IContactProps, IContactState> {
                 onClick={GA.openEmail}
                 className={classes.navLink}
               >
-                <i className={classes.icons + " fas fa-envelope"} />
+                <i className={classes.icons + ' fas fa-envelope'} />
                 <span className={classes.navLinkText}>{urls.EMAIL}</span>
               </Button>
               <Button
                 href={urls.GITHUB}
+                rel="noreferrer"
                 target="_blank"
                 onClick={GA.openGithub}
                 className={classes.navLink}
               >
-                <i className={classes.icons + " fab fa-github"} />
+                <i className={classes.icons + ' fab fa-github'} />
                 <span className={classes.navLinkText}>{urls.GITHUB}</span>
               </Button>
             </div>

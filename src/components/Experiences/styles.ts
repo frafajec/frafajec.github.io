@@ -13,7 +13,7 @@ const styles = (theme: Theme) =>
         color: variables.colors.white,
         content: '"..."',
         display: 'flex',
-        fontSize: '4rem',
+        fontSize: theme.typography.pxToRem(64),
         justifyContent: 'center',
       },
       border: 0,

@@ -7,6 +7,7 @@ const styles = (theme: Theme) =>
     container: {
       alignItems: 'center',
       flexDirection: 'column',
+
       [theme.breakpoints.down('sm')]: {
         alignItems: 'initial',
         padding: '0 40px',
@@ -17,12 +18,13 @@ const styles = (theme: Theme) =>
     },
     title: {
       color: variables.colors.blue,
-      fontSize: '2.1rem',
+      fontSize: theme.typography.pxToRem(35),
       fontWeight: 300,
       marginBottom: '5px',
       textAlign: 'left',
+
       [theme.breakpoints.down('xs')]: {
-        fontSize: '1.9rem',
+        fontSize: theme.typography.pxToRem(30),
       },
     },
   });

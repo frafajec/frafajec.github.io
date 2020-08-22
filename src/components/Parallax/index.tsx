@@ -97,9 +97,9 @@ class Parallax extends React.Component<IParallaxProps, IParallaxState> {
               <div className={brandCls}>
                 <h1 className={classes.title}>Filip Rafajec</h1>
                 <div className={classes.line} />
-                <h3 className={classes.subtitle}>
+                <h2 className={classes.subtitle}>
                   <span>Web developer</span> - <span>Team lead</span>
-                </h3>
+                </h2>
               </div>
             </Grid>
           </Grid>
