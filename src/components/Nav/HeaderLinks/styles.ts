@@ -61,6 +61,15 @@ const headerLinksStyle = (theme: Theme) =>
       padding: '10px 15px',
       textAlign: 'center',
     },
+    closeButton: {
+      position: 'absolute',
+      bottom: 20,
+      left: 'calc(50% - 31px)',
+
+      '& i': {
+        fontSize: 50,
+      },
+    },
   });
 
 export default headerLinksStyle;

@@ -92,9 +92,12 @@ class Header extends React.Component<IHeaderProps, IHeaderState> {
             anchor={'right'}
             open={this.state.mobileOpen}
             onClose={this.handleDrawerToggle}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
           >
             <div className={classes.appResponsive}>
-              <HeaderLinks drawer />
+              <HeaderLinks drawer onDrawerClose={this.handleDrawerToggle} />
             </div>
           </Drawer>
         </Hidden>

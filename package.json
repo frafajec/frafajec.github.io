@@ -1,6 +1,6 @@
 {
   "name": "frafajec.github.io",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "homepage": "http://frafajec.github.io",
   "dependencies": {
@@ -10,11 +10,11 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.7.10",
-    "typescript": "~3.9.7"
+    "typescript": "~4.0.2"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.3",
-    "@testing-library/react": "^10.4.8",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^10.4.9",
     "@testing-library/user-event": "^12.1.1",
     "@types/classnames": "^2.2.6",
     "@types/jest": "^26.0.10",
@@ -22,7 +22,7 @@
     "@types/node": "^14.6.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
-    "@types/react-scroll": "^1.5.4"
+    "@types/react-scroll": "^1.8.0"
   },
   "scripts": {
     "start": "BROWSER=none react-scripts start",

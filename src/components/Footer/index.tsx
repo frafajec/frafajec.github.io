@@ -19,7 +19,7 @@ class Footer extends React.Component<IFooterProps, IFooterState> {
   navbarHeight: number = -77;
 
   scrollTo(location: string, offset: number = 0) {
-    const options = { smooth: true, duration: 800, offset };
+    const options: any = { smooth: true, duration: 800, offset };
     if (!offset) {
       // bug in scroller, needs to be removed otherwise no animation is triggered
       delete options.offset;
