@@ -87,7 +87,7 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
                 name="Mathematical Gymnasium"
                 date="2010 - 2015"
                 title="General education"
-                desc="Foundation for science."
+                desc="Foundation for science and IT background."
                 location="Varazdin, Croatia"
               />
             </Section>
