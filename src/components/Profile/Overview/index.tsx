@@ -26,6 +26,7 @@ class ProfileOverview extends React.Component<IProfileOverviewProps> {
                     ${pi768} 768w,
                     ${pi1024} 1024w,
                     ${pi1200} 1200w`;
+    const sizes = `190px`; // image size, restricts what browser will load
 
     return (
       <div className={classes.overview}>
@@ -44,6 +45,7 @@ class ProfileOverview extends React.Component<IProfileOverviewProps> {
           className={classes.image}
           src={pi1200}
           srcSet={srcSet}
+          sizes={sizes}
           alt="personal"
         />
       </div>

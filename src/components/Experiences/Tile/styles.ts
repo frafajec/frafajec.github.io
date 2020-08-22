@@ -40,7 +40,7 @@ const styles = (theme: Theme) =>
     },
     name: {
       fontSize: theme.typography.pxToRem(17),
-      fontWeight: 700,
+      fontWeight: 500,
       margin: '10px 0',
       [theme.breakpoints.down('sm')]: {
         margin: '0 10px 0 0',
