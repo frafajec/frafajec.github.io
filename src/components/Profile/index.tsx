@@ -40,9 +40,9 @@ class Profile extends React.Component<IProfileProps> {
                 <div className={classes.about}>
                   <h3 className={classes.title}>About me</h3>
                   <p className={classes.description}>
-                    I am a young mind with goals set high and the ambition to accomplish even more.
-                    Currently, I am currently perfecting my technical skills and getting more
-                    experience in company and teams management.
+                    Hi! Im Filip and at the moment I am a team coordinator and technical consultant!
+                    Currently, I am focusing on my technical skills in web domain and getting better
+                    in leading a company, its teams and driving technical excellence forward.
                     <br />
                     <br /> My primary specialization is Software development with all its charms -
                     conceptualizing, planning, executing and consulting along the way.
