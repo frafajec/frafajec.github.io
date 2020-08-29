@@ -31,8 +31,13 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
               <Tile
                 name="Rockpaper"
                 date="2018 - Present"
-                title="Co-Founder & CTO"
-                desc="Creating a startup world with all its charms!"
+                title="Founder & CTO"
+                desc={`Startup world at its finest.<br />
+                From though, idea, team, many iterations, all the way to a live product. It becomes almost impossible
+                to describe the learnings of such an endeavour.</br></br>
+                Overall, besides the skills gained, successes and failures experienced, and wearing many hats - 
+                biggest value was working with the motivated, charming, and super-skilled team aiming for greatness.
+                </br></br>I consider this journey a personal highlight of my career and could talk about it for days!`}
                 location="Seattle, US"
                 url="https://www.therockpaper.com"
                 urlText="therockpaper.com"
@@ -40,8 +45,14 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
               <Tile
                 name="Parkside"
                 date="2016 - Present"
-                title="Web Developer & Team Lead"
-                desc="Leading teams of engineers across different projects with different clients through cutting-edge projects and challenges."
+                title="Team Lead | ex. Web Developer"
+                desc={`Leading teams of engineers & designers across different agile projects with different clients 
+                through cutting-edge projects and challenges.<br />
+                Each project with their own challenge and ambitions - this required careful planning of roadmap,
+                resources, features & technologies while maintaining stable and happy teams.<br />
+                Internally, company is experiencing growth which also required hiring and introducing new people, 
+                adding new practices and changing existing ones all while keeping the company culture at highest
+                priority.`}
                 location="Graz, Austria"
                 url="https://www.parkside.at"
                 urlText="parkside.at"
@@ -50,16 +61,21 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
                 name="Info3"
                 date="2014 - 2016"
                 title="Full-Stack Developer"
-                desc="Working on developing customized ERP systems and Web apps tailored to clients needs."
+                desc={`Working on developing customized ERP systems and Web apps tailored to clients needs.<br />
+                Custom client solutions required taking detailed specification from client and establishing trust based
+                relationship. Also, working with bigger companies, this was a good introduction into corporate 
+                structures & learning the value of a good meeting.`}
                 location="Varazdin, Croatia"
                 url="http://www.info3.hr"
                 urlText="info3.hr"
               />
               <Tile
                 name="Freelance"
-                date="2011 - Present"
+                date="2011 - 2014"
                 title="Web projects"
-                desc="Working on lean projects for money or glory!"
+                desc={`Working on lean projects for money or glory! 
+                  With various technologies and clients, this thought me the value of speed and precision in the 
+                  world of web.`}
                 location="Worldwide"
               />
             </Section>

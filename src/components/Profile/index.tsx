@@ -40,18 +40,20 @@ class Profile extends React.Component<IProfileProps> {
                 <div className={classes.about}>
                   <h3 className={classes.title}>About me</h3>
                   <p className={classes.description}>
-                    Hi! Im Filip and at the moment I am a team coordinator and technical consultant!
-                    Currently, I am focusing on my technical skills in web domain and getting better
-                    in leading a company, its teams and driving technical excellence forward.
+                    Hi! I'm Filip and at the moment I am a leader, team coordinator, and technical
+                    consultant! Currently, I am focusing on my technical skills in the web domain,
+                    learning ins and outs of leading a company, its teams, and driving technical
+                    excellence forward.
                     <br />
-                    <br /> My primary specialization is Software development with all its charms -
-                    conceptualizing, planning, executing and consulting along the way.
+                    <br /> I am specialized in web software development with all its charms -
+                    conceptualizing, planning, executing, and consulting along the way.
                     <br />
-                    <br /> My focus is driving teams and motivating people to do their best in both
-                    personal and professional aspects. If you have more interests don't hesitate to
-                    reach out!
+                    <br /> My passion is leadership - driving individuals and teams to do their best
+                    in both personal and professional aspects. I strongly believe that path to
+                    successful team, project, company is the happiness and motivation of its members
+                    - with that anything can be achieved.
                     <br />
-                    <br /> For more info Ill be happy to chat and share!
+                    <br /> If I got you interested, don't hesitate to reach out!
                   </p>
                 </div>
               </Grid>

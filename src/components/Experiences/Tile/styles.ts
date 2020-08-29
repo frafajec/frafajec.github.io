@@ -22,6 +22,7 @@ const styles = (theme: Theme) =>
     desc: {
       fontSize: theme.typography.pxToRem(14),
       fontWeight: 300,
+      lineHeight: 1.4,
       marginBottom: '10px',
 
       [theme.breakpoints.down('sm')]: {

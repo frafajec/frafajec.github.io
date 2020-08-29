@@ -31,6 +31,14 @@ class Contact extends React.Component<IContactProps, IContactState> {
             />
             <div className={classes.row}>
               <Button
+                href={`mailto:${urls.EMAIL}`}
+                onClick={GA.openEmail}
+                className={classes.navLink}
+              >
+                <i className={classes.icons + ' fas fa-envelope'} />
+                <span className={classes.navLinkText}>{urls.EMAIL}</span>
+              </Button>
+              <Button
                 href={urls.LINKEDIN}
                 rel="noreferrer"
                 target="_blank"
@@ -38,15 +46,7 @@ class Contact extends React.Component<IContactProps, IContactState> {
                 className={classes.navLink}
               >
                 <i className={classes.icons + ' fab fa-linkedin'} />
-                <span className={classes.navLinkText}>{urls.LINKEDIN}</span>
-              </Button>
-              <Button
-                href={`mailto:${urls.EMAIL}`}
-                onClick={GA.openEmail}
-                className={classes.navLink}
-              >
-                <i className={classes.icons + ' fas fa-envelope'} />
-                <span className={classes.navLinkText}>{urls.EMAIL}</span>
+                <span className={classes.navLinkText}>/in/frafajec</span>
               </Button>
               <Button
                 href={urls.GITHUB}
@@ -56,7 +56,7 @@ class Contact extends React.Component<IContactProps, IContactState> {
                 className={classes.navLink}
               >
                 <i className={classes.icons + ' fab fa-github'} />
-                <span className={classes.navLinkText}>{urls.GITHUB}</span>
+                <span className={classes.navLinkText}>frafajec</span>
               </Button>
             </div>
           </Grid>

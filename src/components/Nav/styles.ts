@@ -15,7 +15,7 @@ const styles = (theme: Theme) =>
       marginBottom: '20px',
       padding: '0.625rem 0',
       position: 'fixed',
-      transition: 'all 150ms ease 0s',
+      transition: 'all 250ms ease 0s',
       width: '100%',
       // zIndex: 1100,
     },

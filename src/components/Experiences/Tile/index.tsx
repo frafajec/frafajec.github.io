@@ -70,7 +70,7 @@ class Tile extends React.Component<ITileProps, ITileState> {
         </Grid>
         <Grid item className={classes.tileAbout}>
           <span className={classes.title}>{title}</span>
-          <span className={classes.desc}>{desc}</span>
+          <span className={classes.desc} dangerouslySetInnerHTML={{ __html: desc }} />
           <div className={classes.additional}>
             {renderLocation}
             {renderUrl}
