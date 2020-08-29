@@ -40,6 +40,10 @@ const styles = (theme: Theme) =>
       [theme.breakpoints.down('xs')]: {
         padding: '0',
       },
+      [theme.breakpoints.up('md')]: {
+        flexDirection: 'column',
+        alignItems: 'center',
+      },
     },
     gridItem: {
       flexBasis: 'auto',
@@ -58,6 +62,9 @@ const styles = (theme: Theme) =>
       width: '50%',
       [theme.breakpoints.down('xs')]: {
         width: '100%',
+      },
+      [theme.breakpoints.up('md')]: {
+        width: 'initial',
       },
     },
     title: {

@@ -6,8 +6,12 @@ const styles = (theme: Theme) =>
   createStyles({
     details: {
       display: 'flex',
-      flexFlow: 'column',
-      margin: '5px 15px',
+      flexFlow: 'row',
+      margin: '15px 15px',
+
+      '& > div': {
+        margin: '0 10px',
+      },
     },
     detailsDesc: {
       fontSize: theme.typography.pxToRem(16),
@@ -19,16 +23,20 @@ const styles = (theme: Theme) =>
       color: variables.colors.blue,
       fontSize: theme.typography.pxToRem(17),
       fontWeight: 300,
-      marginBottom: '2px',
+      marginRight: '4px',
     },
     image: {
       borderRadius: '150px',
-      height: '250px',
+      width: 225,
+      height: 'auto',
       marginLeft: '25px',
       transition: 'all 150ms ease 0s',
-      width: '187px',
       [theme.breakpoints.down('sm')]: {
         marginLeft: 0,
+      },
+
+      [theme.breakpoints.up('md')]: {
+        height: 'auto',
       },
     },
     overview: {
@@ -36,6 +44,10 @@ const styles = (theme: Theme) =>
       display: 'flex',
       justifyContent: 'center',
       width: '100%',
+
+      [theme.breakpoints.up('md')]: {
+        flexDirection: 'column-reverse',
+      },
     },
   });
 

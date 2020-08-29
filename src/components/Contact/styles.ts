@@ -54,6 +54,9 @@ const styles = (theme: Theme) =>
     row: {
       display: 'flex',
       justifyContent: 'space-evenly',
+      maxWidth: 1024,
+      margin: '0 auto',
+
       [theme.breakpoints.down('sm')]: {
         alignItems: 'center',
         flexDirection: 'column',

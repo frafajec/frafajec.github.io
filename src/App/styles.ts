@@ -9,6 +9,7 @@ const styles = (theme: any) =>
       textAlign: 'left',
     },
     mainSection: {
+      maxWidth: 1024,
       background: variables.colors.offBackground,
       color: variables.colors.white,
       borderRadius: '6px',
@@ -17,8 +18,13 @@ const styles = (theme: any) =>
       position: 'relative',
       zIndex: 3,
 
+      '@media(min-width: 1120px)': {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+      },
+
       [theme.breakpoints.down('sm')]: {
-        margin: '-60px 10px 0',
+        margin: '-60px 15px 0',
         paddingTop: 0,
       },
     },

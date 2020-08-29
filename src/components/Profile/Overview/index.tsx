@@ -32,12 +32,18 @@ class ProfileOverview extends React.Component<IProfileOverviewProps> {
       <div className={classes.overview}>
         <Hidden smDown>
           <div className={classes.details}>
-            <strong className={classes.detailsHeader}>Name</strong>
-            <span className={classes.detailsDesc}>Filip Rafajec</span>
-            <strong className={classes.detailsHeader}>Age</strong>
-            <span className={classes.detailsDesc}>{this.getAge()}</span>
-            <strong className={classes.detailsHeader}>Location</strong>
-            <span className={classes.detailsDesc}>Graz, Austria</span>
+            <div>
+              <strong className={classes.detailsHeader}>Name</strong>
+              <span className={classes.detailsDesc}>Filip Rafajec</span>
+            </div>
+            <div>
+              <strong className={classes.detailsHeader}>Age</strong>
+              <span className={classes.detailsDesc}>{this.getAge()}</span>
+            </div>
+            <div>
+              <strong className={classes.detailsHeader}>Location</strong>
+              <span className={classes.detailsDesc}>Graz, Austria</span>
+            </div>
           </div>
         </Hidden>
         <img
