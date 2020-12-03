@@ -45,7 +45,7 @@ class Experiences extends React.Component<IExperiencesProps, IExperiencesState> 
               <Tile
                 name="Parkside"
                 date="2016 - Present"
-                title="Team Lead | ex. Web Developer"
+                title="Engineering Lead | Technical consultant"
                 desc={`Leading teams of engineers & designers across different agile projects with different clients 
                 through cutting-edge projects and challenges.<br />
                 Each project with their own challenge and ambitions - this required careful planning of roadmap,

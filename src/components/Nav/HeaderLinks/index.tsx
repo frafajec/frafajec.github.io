@@ -33,7 +33,7 @@ function HeaderLinks({ ...props }: IProps) {
         <Item drawer values={headerLinks[headerLinkKey.email]} />
         <Item drawer values={headerLinks[headerLinkKey.linkedin]} />
         <Item drawer values={headerLinks[headerLinkKey.github]} />
-        <Item drawer values={headerLinks[headerLinkKey.medium]} />
+        {/* <Item drawer values={headerLinks[headerLinkKey.medium]} /> */}
       </List>
     </>
   );
