@@ -19,6 +19,15 @@ then
     cp "README.md" deploy/
     echo "Copying configs"
     cp ".gitignore" deploy/
+    echo "Replace file imports"
+    sed -i '' 's/\/favicon/favicon/g' deploy/index.html
+    sed -i '' 's/\/_next/_next/g' deploy/index.html
+    sed -i '' 's/\/fonts/fonts/g' deploy/index.html
+    echo "Replace css content"
+    for entry in ./deploy/_next/static/css/*                               ✔
+    do
+      sed -i '' 's/\/fonts/fonts/g' $entry
+    done
 
     # Pushing deploy contents as a new deploy
     echo ""
