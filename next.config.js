@@ -15,8 +15,7 @@ module.exports = withPlugins([
         adapter: require('responsive-loader/sharp'),
       },
     },
-    // withBundleAnalyzer,
   ],
-
   // your other plugins here
+  // [withBundleAnalyzer],
 ]);
