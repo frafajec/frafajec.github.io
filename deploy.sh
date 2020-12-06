@@ -7,14 +7,14 @@ then
     echo ""
     echo "-- Building production version --"
     yarn install
-    yarn build
+    yarn export
 
     # Copy from build to deploy folder
     echo ""
     echo "-- Preparing deploymeny --"
     mkdir "deploy"
     echo "Copying build"
-    cp -R build/. deploy/
+    cp -R out/. deploy/
     echo "Copying readme"
     cp "README.md" deploy/
     echo "Copying configs"
