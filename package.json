@@ -1,13 +1,13 @@
 {
-  "name": "next-test",
+  "name": "frafajec.github.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next build && next export",
-    "deploy": "./deploy.sh"
+    "export": "next build && next export -o docs",
+    "deploy": "rm -rf docs/ && yarn export && node deploy.js"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -31,6 +31,7 @@
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
+    "replace-in-file": "^6.1.0",
     "responsive-loader": "^2.2.1",
     "sass": "^1.30.0",
     "typescript": "^4.1.2",
