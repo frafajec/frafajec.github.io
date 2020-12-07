@@ -18,13 +18,13 @@ export default class MyDocument extends Document {
             }}
           /> */}
 
-          <link
+          {/* <link
             rel="preload"
             href="/fonts/Roboto-Regular.ttf"
             as="font"
             type="font/ttf"
             crossOrigin="anonymous"
-          />
+          /> */}
           <link
             rel="preload"
             href="/fonts/Roboto-Light.ttf"
@@ -39,20 +39,20 @@ export default class MyDocument extends Document {
             type="font/ttf"
             crossOrigin="anonymous"
           />
-          <link
+          {/* <link
             rel="preload"
             href="/fonts/Roboto-Bold.ttf"
             as="font"
             type="font/ttf"
             crossOrigin="anonymous"
-          />
-          <link
+          /> */}
+          {/* <link
             rel="preload"
             href="/fonts/Roboto-Italic.ttf"
             as="font"
             type="font/ttf"
             crossOrigin="anonymous"
-          />
+          /> */}
           <link
             rel="preload"
             href="/fonts/Roboto-LightItalic.ttf"
