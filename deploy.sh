@@ -10,32 +10,29 @@ if [ "$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')" == "master" ]
 then
     echo ""
     echo "-- Building production version --"
-    rm -rf deploy
+    rm -rf deploy2
     yarn install
     yarn export
 
     # Copy from build to deploy folder
     echo ""
     echo "-- Preparing deploymeny --"
-    mkdir "deploy"
+    mkdir "deploy2"
     echo "Copying build"
-    cp -R out/. deploy/
+    cp -R docs/. deploy2/
     echo "Copying readme"
-    cp "README.md" deploy/
+    cp "README.md" deploy2/
     echo "Copying configs"
-    cp ".gitignore" deploy/
+    cp ".gitignore" deploy2/
     echo "Remove _ from files and folders"
-    rm -rf ./deploy/next
-    mkdir ./deploy/next
-    mv ./deploy/_next/* ./deploy/next
-    rm -rf _next
-    rmdir _next
+    mv docs/_next deploy2/next
+    rm -rf deploy2/_next
     echo "Replace file imports"
-    sed -i '' 's/\/favicon/favicon/g' deploy/index.html
-    sed -i '' 's/\/_next/next/g' deploy/index.html
-    sed -i '' 's/\/fonts/fonts/g' deploy/index.html
+    sed -i '' 's/\/favicon/favicon/g' deploy2/index.html
+    sed -i '' 's/\/_next/next/g' deploy2/index.html
+    sed -i '' 's/\/fonts/fonts/g' deploy2/index.html
     echo "Replace css content"
-    for entry in ./deploy/next/static/css/*                               ✔
+    for entry in ./deploy2/next/static/css/*                               ✔
     do
       sed -i '' 's/\/fonts/fonts/g' $entry
     done
