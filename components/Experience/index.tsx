@@ -83,6 +83,25 @@ export default function Experience() {
 
       <div className="flex flex-col md:items-center px-8">
         <ExperienceRow
+          company="Dynatrace"
+          duration="2021 - Present"
+          title="Lead Product Engineer"
+          location="Graz, Austria"
+          url="https://www.dynatrace.com/"
+          urlText="dynatrace.com"
+        >
+          Technical leadership in end-to-end delivery of major product features, providing status
+          transparency, high quality outcomes, and feature completeness.
+          <br />
+          <br />
+          Technical leader for Software Engineering teams that focus on specific business value
+          delivery - bridge between all parties involved. Driving forward product values, helping
+          specifying and backing up technical decisions while maintaining focus on delivery and
+          quality.
+          <br />
+        </ExperienceRow>
+        <hr className="w-2/5 lg:hidden border-0 border-t border-blueish border-opacity-60 my-2 sm:my-4 lg:my-8 mx-auto" />
+        <ExperienceRow
           company="Rockpaper"
           duration="2018 - Present"
           title="Founder & CTO"
@@ -106,7 +125,7 @@ export default function Experience() {
         <hr className="w-2/5 lg:hidden border-0 border-t border-blueish border-opacity-60 my-2 sm:my-4 lg:my-8 mx-auto" />
         <ExperienceRow
           company="Parkside"
-          duration="2016 - Present"
+          duration="2016 - 2021"
           title="Engineering Lead | Technical consultant"
           location="Graz, Austria"
           url="https://www.parkside.at/"
