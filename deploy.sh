@@ -1,5 +1,9 @@
 #!/bin/sh
 
+##########
+# USE YARN EXPORT
+#########
+
 # Check if current branch is master
 # Proceed to build, remove!
 if [ "$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')" == "master" ]
